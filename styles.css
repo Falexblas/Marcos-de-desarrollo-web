@@ -1,0 +1,54 @@
+body{
+    padding-top: 50px; /* Ajusta este valor según la altura del navbar */
+    background-color: rgb(244, 245, 247);
+}
+
+.logo{
+    width: 50px;
+}
+
+/* Estilos para los indicadores */
+.carousel-indicators button {
+    background-color: white; /* Color de los indicadores */
+    width: 30px; /* Ancho */
+    height: 4px; /* Grosor */
+    border-radius: 2px; /* Bordes redondeados */
+    margin: 0 5px; /* Espaciado */
+    opacity: 0.5; /* Transparencia */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .carousel-indicators .active {
+    opacity: 1; /* Indicador activo resaltado */
+  }
+  
+
+  .icon-fire {
+    font-size: 2rem;
+    color: #e76429;
+    margin-left: 10px;
+  }
+
+/* Estilos para los íconos sociales */
+.social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    aspect-ratio: 1; /* Mantiene la forma circular */
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  

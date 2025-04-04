@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academia</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- header -->
+
+    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="img/LOGO.png" alt="logo" class="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Cursos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-white"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Nosotros
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Paquetes duos</a></li>
+                <li><a class="dropdown-item" href="#">Paquetes trios</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Full days</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar curso"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carrusel-->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide w-100"
+      data-bs-ride="carousel"
+    >
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+        ></button>
+      </div>
+
+      <!-- Contenedor de Slides -->
+      <div class="carousel-inner w-100">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div
+            class="card mb-3 p-4 bg-dark text-white w-100"
+            style="margin: auto; border-radius: 0 !important"
+          >
+            <div class="row g-0 align-items-center">
+              <!-- Columna de Texto -->
+              <div class="col-md-6 ps-5">
+                <div class="card-body">
+                  <span class="badge bg-warning text-dark"
+                    >PRÓXIMO LANZAMIENTO</span
+                  >
+                  <h2 class="card-title mt-2">Terraform desde cero</h2>
+                  <p class="card-text">
+                    Aprende a configurar, desplegar y gestionar infraestructuras
+                    en la nube con Terraform, la herramienta líder en IaC.
+                  </p>
+                  <p><i class="bi bi-clock"></i> 5 horas</p>
+                  <button class="btn btn-primary">
+                    <i class="bi bi-cart"></i> Cómpralo por <s>$99</s> S/59
+                    SOLES
+                  </button>
+                </div>
+              </div>
+
+              <!-- Columna de Imagen -->
+              <div class="col-md-6 pe-5">
+                <img
+                  src="img/JAVA.jpg"
+                  class="img-fluid rounded"
+                  style="height: 100%; object-fit: cover"
+                  alt="Curso Terraform"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div
+            class="card mb-3 p-4 bg-dark text-white w-100"
+            style="margin: auto; border-radius: 0 !important"
+          >
+            <div class="row g-0 align-items-center">
+              <div class="col-md-6 ps-5">
+                <div class="card-body">
+                  <span class="badge bg-warning text-dark">NUEVO CURSO</span>
+                  <h2 class="card-title mt-2">Curso de React JS</h2>
+                  <p class="card-text">
+                    Aprende a crear aplicaciones web modernas con React y mejora
+                    tus habilidades de desarrollo frontend.
+                  </p>
+                  <p><i class="bi bi-clock"></i> 10 horas</p>
+                  <button class="btn btn-primary">
+                    <i class="bi bi-cart"></i> Cómpralo por <s>$120</s> S/79
+                    SOLES
+                  </button>
+                </div>
+              </div>
+
+              <div class="col-md-6 pe-5">
+                <img
+                  src="img/CARRUSEL.jpg"
+                  class="img-fluid rounded"
+                  style="height: 100%; object-fit: cover"
+                  alt="Curso React"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cursos inicio-->
+  
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 text-left title-container">
+          <h2 class="d-inline">Los Cursos Más Populares</h2>
+          <i class="bi bi-fire icon-fire"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Promociones -->
+    <div class="container mt-3 text-center">
+      <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img
+              src="img/python-curso-gratis.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="img/curso-java.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="img/curso-react.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="img/curso-js.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="img/curso-angular.jpeg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img
+              src="img/curso-springboot.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="img/curso-css.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="col-md-3 mb-3">
+          <div class="card">
+            <img src="img/curso-php.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modales -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white bg-dark" >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">CodeXpert</h6>
+              <p>
+                Aprende programación de manera práctica y conviértete en un experto en 
+                tecnologías como Java, React, Spring Boot y más. ¡Impulsa tu carrera hoy! <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="w-100 clearfix d-md-none" />
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">SERVICIO AL CLIENTE</h6>
+              <p><a class="text-white text-decoration-none" href="#!">Términos y condiciones de uso</a></p>
+              <p><a class="text-white text-decoration-none" href="#!">Política de reembolsos</a></p>
+              <p><a class="text-white text-decoration-none" href="#!">Preguntas frecuentes</a></p>
+              
+            </div>
+            <!-- Grid column -->
+    
+            <hr class="w-100 clearfix d-md-none" />
+    
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">CONTÁCTANOS</h6>
+              <p><i class="bi bi-envelope mr-3"></i> CodeXpert@gmail.com</p>
+              <p><i class="bi bi-telephone mr-3"></i> + 01 234 567 88</p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
+              <div class="social-icons justify-content-center">
+                <a href="#!" class="social-icon bg-primary"><i class="bi bi-facebook"></i></a>
+                <a href="#!" class="social-icon bg-info"><i class="bi bi-twitter"></i></a>
+                <a href="#!" class="social-icon bg-danger"><i class="bi bi-instagram"></i></a>
+                <a href="#!" class="social-icon bg-secondary"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
+            
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2025 Copyright
+      </div>
+      <!-- Copyright -->
+    </footer>
+    
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
