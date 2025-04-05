@@ -52,3 +52,22 @@ body{
     opacity: 0.8;
   }
   
+
+  .card {
+    height: 100%;
+  }
+  
+  .populares{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-text {
+    flex-grow: 1; /* Empuja el botón hacia abajo */
+  }
+  
+  .card-body .btn {
+    align-self: center; /* o center si prefieres centrarlo */
+    margin-top: auto;       /* lo empuja hacia abajo sin estirarse */
+  }
+  

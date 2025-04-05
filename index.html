@@ -17,15 +17,16 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- header -->
-
+    <!-- Header -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img src="img/LOGO.png" alt="logo" class="logo"
-        /></a>
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="#">
+          <img src="img/LOGO.png" alt="logo" class="logo" />
+        </a>
+        <!-- Botón de navegación móvil -->
         <button
-          class="navbar-toggler"
+          class="navbar-toggler bg-light"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -33,51 +34,37 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- Contenido del nav -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Todo alineado a la derecha: Enlaces de navegación y íconos -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#"
-                >Inicio</a
-              >
+              <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Cursos</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle text-white"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Nosotros
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <i class="bi bi-person"></i> <!-- Icono de usuario -->
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Paquetes duos</a></li>
-                <li><a class="dropdown-item" href="#">Paquetes trios</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Full days</a></li>
-              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <i class="bi bi-cart"></i> <!-- Icono de carrito -->
+              </a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Buscar curso"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Buscar
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-
+    
+    
     <!-- Carrusel-->
     <div
       id="carouselExampleIndicators"
@@ -199,17 +186,17 @@
               class="card-img-top"
               alt="..."
             />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+            <div class="card-body populares">
+              <h5 class="card-title">Curso de Python</h5>
+              <p class="card-text ">
+                Aprende los fundamentos de Python y cómo utilizarlo para desarrollar
+                 aplicaciones web, automatización, análisis de datos y más.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
@@ -219,17 +206,16 @@
         <div class="col-md-3 mb-3">
           <div class="card">
             <img src="img/curso-java.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso de Java</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <p class="card-text ">
+                Aprende a programar en Java desde cero, ideal para desarrolladores que quieren crear aplicaciones de escritorio y móviles.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
@@ -238,17 +224,16 @@
         <div class="col-md-3 mb-3">
           <div class="card">
             <img src="img/curso-react.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso de React</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+              <p class="card-text ">
+                Domina React.js, una de las bibliotecas más populares para construir interfaces de usuario dinámicas y eficientes.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
@@ -257,17 +242,16 @@
         <div class="col-md-3 mb-3">
           <div class="card">
             <img src="img/curso-js.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso completo de JavaScript</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Aprende todo lo que necesitas sobre JavaScript para desarrollar aplicaciones web interactivas y dinámicas.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
@@ -277,17 +261,16 @@
         <div class="col-md-3 mb-3">
           <div class="card">
             <img src="img/curso-angular.jpeg" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso de Angular</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Domina Angular y aprende a construir aplicaciones web robustas y escalables con esta popular framework.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
@@ -301,17 +284,16 @@
               class="card-img-top"
               alt="..."
             />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso de Spring Boot</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Aprende a desarrollar aplicaciones Java con Spring Boot, uno de los frameworks más utilizados en el desarrollo backend.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
@@ -321,37 +303,35 @@
         <div class="col-md-3 mb-3">
           <div class="card">
             <img src="img/curso-css.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso desde cero CSS</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Aprende CSS desde lo básico hasta lo avanzado para crear diseños web modernos y responsivos.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
         </div>
 
         <!-- Tarjeta 6 -->
-        <div class="col-md-3 mb-3">
-          <div class="card">
+        <div class="col-md-3 mb-3 " >
+          <div class="card ">
             <img src="img/curso-php.png" class="card-img-top" alt="..." />
-            <div class="card-body">
+            <div class="card-body populares">
               <h5 class="card-title">Curso desde cero PHP</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Aprende PHP desde cero para desarrollar aplicaciones web dinámicas, incluyendo el uso de bases de datos y formularios.
               </p>
               <a
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
-                >Go somewhere</a
+                >Ver contenido</a
               >
             </div>
           </div>
