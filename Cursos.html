@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devverso - Cursos</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="img/programacion.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="img/LOGO.png" alt="logo" class="logo" />
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Cursos.html">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="bi bi-person"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#"><i class="bi bi-cart"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="container" style="margin-top: 100px;">
+    <h1 class="mb-4">Nuestros Cursos</h1>
+    <p>Explora los cursos que ofrecemos para potenciar tus habilidades.</p>
+
+    <!-- Buscador -->
+    <div class="input-group mb-4">
+      <input type="text" class="form-control" id="buscador" placeholder="Buscar curso...">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+    </div>
+
+    <!-- Lista de cursos -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="lista-cursos">
+      <!-- Curso 1 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/java.jpg" class="card-img-top" alt="Curso de Java" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de Java</h5>
+            <p class="card-text">Aprende Java desde cero con ejemplos prácticos.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 2 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/python-curso-gratis.jpg" class="card-img-top" alt="Curso de Python" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de Python</h5>
+            <p class="card-text">Aprende Python desde cero con ejemplos prácticos.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 3 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-js.jpg" class="card-img-top" alt="Curso de JavaScript" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de JavaScript</h5>
+            <p class="card-text">Aprende JavaScript con ejemplos interactivos.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 4 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-css.jpg" class="card-img-top" alt="Curso de C++" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de C++</h5>
+            <p class="card-text">Aprende C++ desde cero con ejemplos prácticos.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 5 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-html.jpg" class="card-img-top" alt="Curso de HTML" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de HTML</h5>
+            <p class="card-text">Aprende a crear páginas web con HTML.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 6 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-react.jpg" class="card-img-top" alt="Curso de React" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de React JS</h5>
+            <p class="card-text">Aprende a crear páginas web con React JS.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 7 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-typescript.png" class="card-img-top" alt="Curso de TypeScript" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de TypeScript</h5>
+            <p class="card-text">Aprende TypeScript desde cero.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 8 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-git-github.jpg" class="card-img-top" alt="Curso de Git y GitHub" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de Git y GitHub</h5>
+            <p class="card-text">Aprende a usar Git y GitHub.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 9 -->
+      <div class="col curso">
+        <div class="card h-100">
+          <img src="img/curso-angular.jpeg" class="card-img-top" alt="Curso de Angular" />
+          <div class="card-body">
+            <h5 class="card-title">Curso de Angular</h5>
+            <p class="card-text">Aprende Angular desde cero.</p>
+            <a href="#" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Puedes agregar hasta el curso 15 si deseas -->
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Buscador Script -->
+  <script>
+    const buscador = document.getElementById("buscador");
+    const cursos = document.querySelectorAll(".curso");
+
+    buscador.addEventListener("input", function () {
+      const texto = this.value.toLowerCase();
+      cursos.forEach((curso) => {
+        const contenido = curso.textContent.toLowerCase();
+        curso.style.display = contenido.includes(texto) ? "block" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
