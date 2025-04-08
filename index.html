@@ -199,6 +199,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de Python"
+                data-url="/cursos/detalle-curso-python.html"
                 >Ver contenido</a
               >
             </div>
@@ -218,6 +220,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de Java"
+                data-url="/cursos/detalle-curso-java.html"
                 >Ver contenido</a
               >
             </div>
@@ -236,6 +240,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de ReactJS"
+                data-url="/cursos/detalle-curso-reactJS.html"
                 >Ver contenido</a
               >
             </div>
@@ -254,6 +260,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de JavaScript"
+                data-url="/cursos/detalle-curso-javascript.html"
                 >Ver contenido</a
               >
             </div>
@@ -265,7 +273,7 @@
           <div class="card">
             <img src="img/curso-angular.jpeg" class="card-img-top" alt="..." />
             <div class="card-body populares">
-              <h5 class="card-title">Curso de Angular</h5>
+              <h5 class="card-title">Curso de AngularFW</h5>
               <p class="card-text">
                 Domina Angular y aprende a construir aplicaciones web robustas y escalables con esta popular framework.
               </p>
@@ -273,6 +281,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de AngularFW"
+                data-url="/cursos/detalle-curso-AngularFW.html"
                 >Ver contenido</a
               >
             </div>
@@ -296,6 +306,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de Spring Boot"
+                data-url="/cursos/detalle-curso-Spring Boot.html"
                 >Ver contenido</a
               >
             </div>
@@ -315,6 +327,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de CSS"
+                data-url="/cursos/detalle-curso-css.html"
                 >Ver contenido</a
               >
             </div>
@@ -334,6 +348,8 @@
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                data-title="Curso de Python"
+                data-url="/cursos/detalle-curso-php.html"
                 >Ver contenido</a
               >
             </div>
@@ -453,5 +469,29 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const exampleModal = document.getElementById('exampleModal');
+    
+      exampleModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        const title = button.getAttribute('data-title');
+        const url = button.getAttribute('data-url');
+    
+        const modalTitle = exampleModal.querySelector('.modal-title');
+        const modalBody = exampleModal.querySelector('.modal-body');
+        const modalFooter = exampleModal.querySelector('.modal-footer');
+    
+        modalTitle.textContent = title;
+        modalBody.innerHTML = `¿Deseas ir al contenido completo de este curso?`;
+    
+        // Reemplazar botones del footer
+        modalFooter.innerHTML = `
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <a href="${url}" class="btn btn-primary">Ir al curso</a>
+        `;
+      });
+    </script>
+    
   </body>
 </html>
