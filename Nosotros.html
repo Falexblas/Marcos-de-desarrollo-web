@@ -4,12 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devverso</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css" />
-
-    <link rel="icon" type="image/png" href="img/programacion.png">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="img/programacion.png">
+  <style>
+    /* Estilos generales */
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    /* Estilos para el header */
+    .hero-section {
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+      color: white;
+      padding: 4rem 0;
+      margin-bottom: 3rem;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .hero-title {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Estilos para el acordeón */
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(52, 152, 219, 0.1);
+      color: #2c3e50;
+      font-weight: 600;
+    }
+    
+    .accordion-button {
+      font-weight: 500;
+      padding: 1.2rem 1.25rem;
+    }
+    
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(0,0,0,.125);
+    }
+    
+    .accordion-item {
+      border: none;
+      margin-bottom: 15px;
+      border-radius: 10px !important;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    
+    .accordion-item:hover {
+      transform: translateY(-3px);
+    }
+    
+    .accordion-body {
+      padding: 1.5rem;
+    }
+    
+    /* Estilos para las cards internas */
+    .feature-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .feature-card .card-body {
+      padding: 1.8rem;
+    }
+    
+    .card-title {
+      color: #2c3e50;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .text-primary {
+      color: #3498db !important;
+    }
+    
+    /* Estilos para el lema */
+    .motto-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 3rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-left: 5px solid #3498db;
+    }
+    
+    .motto-text {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #2c3e50;
+    }
+    
+    /* Efectos especiales */
+    .highlight {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .highlight::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 10%;
+      background-color: rgba(52, 152, 219, 0.2);
+      z-index: -1;
+      transition: all 0.3s ease;
+    }
+    
+    .highlight:hover::before {
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
 
@@ -47,12 +177,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="#">
-              <i class="bi bi-person"></i> <!-- Icono de usuario -->
+              <i class="bi bi-person"></i>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">
-              <i class="bi bi-cart"></i> <!-- Icono de carrito -->
+            <a class="nav-link text-white" href="carrito.html">
+              <i class="bi bi-cart"></i>
             </a>
           </li>
         </ul>
@@ -60,89 +190,265 @@
     </div>
   </nav>
 
-  <!-- Contenido -->
-   <br>
-   <br>
-  <div class="container">
-    <h1 class="mb-4">Sobre Nosotros</h1>
-    <p>Somos una plataforma dedicada a ofrecer cursos de calidad en programación, desarrollo web, y mucho más.</p>
-
-    <h3>Misión</h3>
-    <p>Brindar educación accesible y de calidad para todos.</p>
-
-    <h3>Visión</h3>
-    <p>Ser referentes en educación tecnológica en el mundo hispano.</p>
+  <!-- Hero Section -->
+  <div class="hero-section text-center">
+    <div class="container">
+      <h1 class="hero-title">Sobre Nosotros</h1>
+      <p class="hero-subtitle">Somos una plataforma dedicada a ofrecer cursos de calidad en programación, desarrollo web, y mucho más.</p>
+    </div>
   </div>
 
-  <!-- Footer -->
-<footer class="text-center text-lg-start text-white bg-dark" >
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">CodeXpert</h6>
-          <p>
-            Aprende programación de manera práctica y conviértete en un experto en 
-            tecnologías como Java, React, Spring Boot y más. ¡Impulsa tu carrera hoy! <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
-          </p>
-        </div>
-        <!-- Grid column -->
+  <!-- Contenido principal -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="accordion" id="aboutAccordion">
+          <!-- Primer ítem del acordeón -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#aboutAcademy">
+                <strong><i class="bi bi-building me-2"></i> Sobre Devverso Academy</strong>
+              </button>
+            </h2>
+            <div id="aboutAcademy" class="accordion-collapse collapse show" data-bs-parent="#aboutAccordion">
+              <div class="accordion-body">
+                <p class="mb-4">Conoce nuestra misión y valores.</p>
+                
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="feature-card">
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">Misión</h5>
+                        <p class="card-text">Brindar educación tecnológica de alta calidad, accesible y práctica para programadores de todos los niveles, con cursos actualizados que impulsen su crecimiento profesional y los preparen para los desafíos del mercado laboral.</p>
+                        <ul class="list-group list-group-flush mt-3">
+                          <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Enseñar habilidades demandadas</li>
+                          <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Aprendizaje práctico con proyectos reales</li>
+                          <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Comunidad activa de desarrolladores</li>
+                          <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-success me-2"></i>Precios accesibles sin sacrificar calidad</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="feature-card">
+                      <div class="card-body">
+                        <h5 class="card-title text-primary">Visión</h5>
+                        <p class="card-text">Ser la plataforma líder en educación tecnológica en español, reconocida por transformar a programadores principiantes en expertos y ayudar a profesionales a mantenerse actualizados en un mundo tecnológico en constante evolución.</p>
+                        <ul class="list-group list-group-flush mt-3">
+                          <li class="list-group-item border-0"><i class="bi bi-rocket text-primary me-2"></i>Expandir el catálogo con tendencias emergentes</li>
+                          <li class="list-group-item border-0"><i class="bi bi-rocket text-primary me-2"></i>Certificaciones reconocidas</li>
+                          <li class="list-group-item border-0"><i class="bi bi-rocket text-primary me-2"></i>Alianzas con empresas tech</li>
+                          <li class="list-group-item border-0"><i class="bi bi-rocket text-primary me-2"></i>+100,000 estudiantes</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <hr class="w-100 clearfix d-md-none" />
+          <!-- Segundo ítem -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutHistory">
+                <strong><i class="bi bi-clock-history me-2"></i> Nuestra historia</strong>
+              </button>
+            </h2>
+            <div id="aboutHistory" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+              <div class="accordion-body">
+                <p>Conoce nuestra historia.</p>
+                <div class="feature-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Nuestros inicios</h5>
+                    <p>Fundada en 2023, Devverso Academy nació de la pasión por la enseñanza de la programación y la necesidad de crear contenido de calidad en español. Comenzamos como un pequeño equipo de instructores y hoy somos una comunidad de más de 10,000 estudiantes.</p>
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                          <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                            <i class="bi bi-people-fill text-primary fs-4"></i>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">+50 Instructores</h6>
+                            <small class="text-muted">Expertos en tecnología</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                          <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                            <i class="bi bi-person-video3 text-primary fs-4"></i>
+                          </div>
+                          <div>
+                            <h6 class="mb-0">+100 Cursos</h6>
+                            <small class="text-muted">Actualizados constantemente</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">SERVICIO AL CLIENTE</h6>
-          <p><a class="text-white text-decoration-none" href="#!">Términos y condiciones de uso</a></p>
-          <p><a class="text-white text-decoration-none" href="#!">Política de reembolsos</a></p>
-          <p><a class="text-white text-decoration-none" href="#!">Preguntas frecuentes</a></p>
-          
-        </div>
-        <!-- Grid column -->
+          <!-- Tercer ítem -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutCampus">
+                <strong><i class="bi bi-laptop me-2"></i> Campus virtual</strong>
+              </button>
+            </h2>
+            <div id="aboutCampus" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+              <div class="accordion-body">
+                <p>Conoce nuestra infraestructura tecnológica.</p>
+                <div class="feature-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Plataforma de aprendizaje</h5>
+                    <p>Contamos con servidores de alta disponibilidad, aulas virtuales interactivas y plataforma de aprendizaje adaptativo.</p>
+                    <div class="row mt-4">
+                      <div class="col-md-4 text-center">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-2">
+                          <i class="bi bi-speedometer2 text-primary fs-2"></i>
+                        </div>
+                        <h6>Rendimiento</h6>
+                        <small class="text-muted">Infraestructura escalable</small>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-2">
+                          <i class="bi bi-shield-lock text-primary fs-2"></i>
+                        </div>
+                        <h6>Seguridad</h6>
+                        <small class="text-muted">Protección de datos</small>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle d-inline-block mb-2">
+                          <i class="bi bi-phone text-primary fs-2"></i>
+                        </div>
+                        <h6>Accesibilidad</h6>
+                        <small class="text-muted">Disponible en cualquier dispositivo</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <hr class="w-100 clearfix d-md-none" />
+          <!-- Cuarto ítem -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutContent">
+                <strong><i class="bi bi-journal-bookmark me-2"></i> Contenidos académicos</strong>
+              </button>
+            </h2>
+            <div id="aboutContent" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+              <div class="accordion-body">
+                <p>Conoce el tipo de contenidos académicos utilizados en nuestra biblioteca de cursos.</p>
+                <div class="feature-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Nuestro enfoque educativo</h5>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                          <div class="text-primary me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                          </div>
+                          <div>
+                            <h6>Cursos interactivos</h6>
+                            <p class="text-muted small">Con ejercicios prácticos y evaluaciones</p>
+                          </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                          <div class="text-primary me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                          </div>
+                          <div>
+                            <h6>Videotutoriales</h6>
+                            <p class="text-muted small">Grabados por expertos en cada tecnología</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex mb-3">
+                          <div class="text-primary me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                          </div>
+                          <div>
+                            <h6>Material descargable</h6>
+                            <p class="text-muted small">Guías, cheat sheets y recursos adicionales</p>
+                          </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                          <div class="text-primary me-3">
+                            <i class="bi bi-check-circle-fill"></i>
+                          </div>
+                          <div>
+                            <h6>Proyectos reales</h6>
+                            <p class="text-muted small">Para aplicar lo aprendido en situaciones prácticas</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Grid column -->
-        <hr class="w-100 clearfix d-md-none" />
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">CONTÁCTANOS</h6>
-          <p><i class="bi bi-envelope mr-3"></i> CodeXpert@gmail.com</p>
-          <p><i class="bi bi-telephone mr-3"></i> + 01 234 567 88</p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
-          <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
-          <div class="social-icons justify-content-center">
-            <a target="_blank" href="https://www.facebook.com/?ref=logo" class="social-icon bg-primary"><i class="bi bi-facebook"></i></a>
-            <a target="_blank" href="https://x.com/" class="social-icon bg-info"><i class="bi bi-twitter"></i></a>
-            <a target="_blank" href="https://www.instagram.com/" class="social-icon bg-danger"><i class="bi bi-instagram"></i></a>
-            <a target="_blank" href="https://github.com/Falexblas/Marcos-de-desarrollo-web" class="social-icon bg-secondary"><i class="bi bi-github"></i></a>
+          <!-- Quinto ítem -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#aboutBusiness">
+                <strong><i class="bi bi-briefcase me-2"></i> Capacitación para Empresas</strong>
+              </button>
+            </h2>
+            <div id="aboutBusiness" class="accordion-collapse collapse" data-bs-parent="#aboutAccordion">
+              <div class="accordion-body">
+                <p>Capacita tu empresa con nosotros.</p>
+                <div class="feature-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Soluciones corporativas</h5>
+                    <p>Ofrecemos soluciones personalizadas para equipos de desarrollo, con seguimiento y métricas de progreso.</p>
+                    <div class="row mt-4">
+                      <div class="col-md-4">
+                        <div class="p-3 border rounded text-center h-100">
+                          <i class="bi bi-people text-primary fs-3 mb-2"></i>
+                          <h6>Planes grupales</h6>
+                          <p class="small text-muted">Descuentos para equipos</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="p-3 border rounded text-center h-100">
+                          <i class="bi bi-bar-chart text-primary fs-3 mb-2"></i>
+                          <h6>Reportes detallados</h6>
+                          <p class="small text-muted">Seguimiento de progreso</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="p-3 border rounded text-center h-100">
+                          <i class="bi bi-gear text-primary fs-3 mb-2"></i>
+                          <h6>Contenido personalizado</h6>
+                          <p class="small text-muted">Adaptado a tus necesidades</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        
+
+        <!-- Lema -->
+        <div class="motto-section text-center mt-5">
+          <h3 class="text-muted mb-3">Nuestro Lema</h3>
+          <p class="motto-text highlight">"De código nuevo a senior developer: Aprende, practica y crece con nosotros."</p>
+        </div>
       </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
+    </div>
   </div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2025 Copyright
-  </div>
-  <!-- Copyright -->
-</footer>
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
