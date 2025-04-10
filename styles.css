@@ -10,11 +10,9 @@ body{
 
 /* Estilos para los indicadores */
 .carousel-indicators button {
-    background-color: white; /* Color de los indicadores */
-    width: 30px; /* Ancho */
-    height: 4px; /* Grosor */
+    
     border-radius: 2px; /* Bordes redondeados */
-    margin: 0 5px; /* Espaciado */
+    margin: 0.5px; /* Espaciado */
     opacity: 0.5; /* Transparencia */
     transition: opacity 0.3s ease-in-out;
   }
@@ -27,7 +25,7 @@ body{
   .icon-fire {
     font-size: 2rem;
     color: #e76429;
-    margin-left: 10px;
+    margin-left: 1rem;
   }
 
 /* Estilos para los íconos sociales */
@@ -72,3 +70,128 @@ body{
     margin-top: auto;       /* lo empuja hacia abajo sin estirarse */
   }
   
+   /* Estilo del carrito lateral */
+   .carrito-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px; /* Ancho predeterminado */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para separar del contenido principal */
+    transition: right 0.3s ease;
+    z-index: 1050;
+    overflow-y: auto;
+    padding: 20px;
+    color: #fff; /* Texto blanco */
+  }
+
+.carrito-lateral.activo {
+  right: 0;
+}
+
+/* Estilo del overlay (fondo oscuro con desenfoque) */
+.carrito-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  z-index: 1049;
+  display: none;
+}
+
+.carrito-overlay.activo {
+  display: block;
+}
+
+/* Estilo de los elementos del carrito */
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para cada ítem */
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.carrito-item:hover {
+  transform: scale(1.02); /* Efecto hover para destacar el ítem */
+}
+
+.carrito-item img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.carrito-item-info {
+  flex: 1;
+}
+
+.carrito-item-info p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.carrito-item-info p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.carrito-item i {
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.carrito-item i:hover {
+  color: darkred; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilo del total */
+#carrito-total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Separador */
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 20px 0;
+}
+
+/* Botón de cerrar */
+#cerrar-carrito {
+  font-size: 24px; /* Tamaño del ícono */
+  color: #fff; /* Color blanco */
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Indicador de clic */
+  transition: transform 0.2s ease; /* Animación al pasar el ratón */
+  padding: 0; /* Eliminar padding predeterminado */
+}
+
+#cerrar-carrito:hover {
+  transform: scale(1.2); /* Agrandar el ícono al pasar el ratón */
+}
+
+/* Reducir el ancho del carrito en pantallas pequeñas */
+@media (max-width: 480px) {
+  .carrito-lateral {
+    width: 250px; /* Ancho reducido para pantallas pequeñas */
+  }
+}

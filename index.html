@@ -9,65 +9,69 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
-/>
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-
-    <link rel="icon" type="image/png" href="img/programacion.png">
-
+    <link rel="icon" type="image/png" href="img/programacion.png" />
   </head>
   <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container-fluid">
-        <!-- Logo a la izquierda -->
         <a class="navbar-brand" href="#">
-          <img src="img/LOGO.png" alt="logo" class="logo" />
+          <img src="/img/LOGO.png" alt="logo" class="logo" />
         </a>
-        <!-- Botón de navegación móvil -->
-        <button
-          class="navbar-toggler bg-light"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Contenido del nav -->
+  
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Todo alineado a la derecha: Enlaces de navegación y íconos -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
+              <a class="nav-link active text-white" href="/index.html">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="Cursos.html">Cursos</a>
+              <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="Nosotros.html">Nosotros</a>
+              <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                <i class="bi bi-person"></i> <!-- Icono de usuario -->
-              </a>
+              <a class="nav-link text-white" href="#"><i class="bi bi-person"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="carrito.html">
-                <i class="bi bi-cart"></i> <!-- Icono de carrito -->
-              </a>
+              <a class="nav-link text-white" href="#"><i class="bi bi-cart"></i></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    
-    
+
+<!-- Carrito lateral desde la derecha -->
+<div id="carrito" class="carrito-lateral bg-dark text-white p-4 shadow">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">🛒 Tu carrito</h4>
+    <button id="cerrar-carrito" class="btn btn-close p-0 m-0 text-white">
+      <i class="bi bi-x" style="font-size: 1.5rem;"></i>
+    </button>
+  </div>
+  <div id="carrito-contenido" class="mt-4">
+    <!-- Curso agregado dinámicamente -->
+  </div>
+  <hr />
+  <div class="d-flex justify-content-between fw-bold">
+    <span>Total:</span>
+    <span id="carrito-total">S/0.00</span>
+  </div>
+</div>
+
+<!-- Fondo oscuro -->
+<div id="carrito-overlay" class="carrito-overlay"></div>
+
+
     <!-- Carrusel-->
     <div
       id="carouselExampleIndicators"
@@ -76,7 +80,7 @@
     >
       <!-- Indicadores -->
       <div class="carousel-indicators"></div>
-      
+
       <!-- Contenedor de Slides -->
       <div class="carousel-inner w-100">
         <!-- Slide 1 -->
@@ -152,13 +156,11 @@
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
 
     <!-- Cursos inicio-->
-  
+
     <div class="container">
       <div class="row mt-5">
         <div class="col-12 text-left title-container">
@@ -177,22 +179,18 @@
             <img
               src="img/python-curso-gratis.jpg"
               class="card-img-top"
-              alt="..."
+              alt="Curso de Python"
             />
             <div class="card-body populares">
               <h5 class="card-title">Curso de Python</h5>
-              <p class="card-text ">
-                Aprende los fundamentos de Python y cómo utilizarlo para desarrollar
-                 aplicaciones web, automatización, análisis de datos y más.
+              <p class="card-text">
+                Aprende los fundamentos de Python y cómo utilizarlo para
+                desarrollar aplicaciones web, automatización, análisis de datos
+                y más.
               </p>
-              <a
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-                data-title="Curso de Python"
-                data-url="/cursos/detalle-curso-python.html"
-                >Ver contenido</a
-              >
+              <a href="/cursos/detalle-curso.html?id=2" class="btn btn-primary">
+                Ver contenido
+              </a>
             </div>
           </div>
         </div>
@@ -203,8 +201,10 @@
             <img src="img/curso-java.jpg" class="card-img-top" alt="..." />
             <div class="card-body populares">
               <h5 class="card-title">Curso de Java</h5>
-              <p class="card-text ">
-                Aprende a programar en Java desde cero, ideal para desarrolladores que quieren crear aplicaciones de escritorio y móviles.
+              <p class="card-text">
+                Aprende a programar en Java desde cero, ideal para
+                desarrolladores que quieren crear aplicaciones de escritorio y
+                móviles.
               </p>
               <a
                 class="btn btn-primary"
@@ -223,8 +223,9 @@
             <img src="img/curso-react.jpg" class="card-img-top" alt="..." />
             <div class="card-body populares">
               <h5 class="card-title">Curso de React</h5>
-              <p class="card-text ">
-                Domina React.js, una de las bibliotecas más populares para construir interfaces de usuario dinámicas y eficientes.
+              <p class="card-text">
+                Domina React.js, una de las bibliotecas más populares para
+                construir interfaces de usuario dinámicas y eficientes.
               </p>
               <a
                 class="btn btn-primary"
@@ -244,7 +245,8 @@
             <div class="card-body populares">
               <h5 class="card-title">Curso completo de JavaScript</h5>
               <p class="card-text">
-                Aprende todo lo que necesitas sobre JavaScript para desarrollar aplicaciones web interactivas y dinámicas.
+                Aprende todo lo que necesitas sobre JavaScript para desarrollar
+                aplicaciones web interactivas y dinámicas.
               </p>
               <a
                 class="btn btn-primary"
@@ -265,7 +267,8 @@
             <div class="card-body populares">
               <h5 class="card-title">Curso de AngularFW</h5>
               <p class="card-text">
-                Domina Angular y aprende a construir aplicaciones web robustas y escalables con esta popular framework.
+                Domina Angular y aprende a construir aplicaciones web robustas y
+                escalables con esta popular framework.
               </p>
               <a
                 class="btn btn-primary"
@@ -290,7 +293,8 @@
             <div class="card-body populares">
               <h5 class="card-title">Curso de Spring Boot</h5>
               <p class="card-text">
-                Aprende a desarrollar aplicaciones Java con Spring Boot, uno de los frameworks más utilizados en el desarrollo backend.
+                Aprende a desarrollar aplicaciones Java con Spring Boot, uno de
+                los frameworks más utilizados en el desarrollo backend.
               </p>
               <a
                 class="btn btn-primary"
@@ -311,7 +315,8 @@
             <div class="card-body populares">
               <h5 class="card-title">Curso desde cero CSS</h5>
               <p class="card-text">
-                Aprende CSS desde lo básico hasta lo avanzado para crear diseños web modernos y responsivos.
+                Aprende CSS desde lo básico hasta lo avanzado para crear diseños
+                web modernos y responsivos.
               </p>
               <a
                 class="btn btn-primary"
@@ -326,13 +331,14 @@
         </div>
 
         <!-- Tarjeta 6 -->
-        <div class="col-md-3 mb-3 " >
-          <div class="card ">
+        <div class="col-md-3 mb-3">
+          <div class="card">
             <img src="img/curso-php.png" class="card-img-top" alt="..." />
             <div class="card-body populares">
               <h5 class="card-title">Curso desde cero PHP</h5>
-              <p class="card-text" >
-                Aprende PHP desde cero para desarrollar aplicaciones web dinámicas, incluyendo el uso de bases de datos y formularios.
+              <p class="card-text">
+                Aprende PHP desde cero para desarrollar aplicaciones web
+                dinámicas, incluyendo el uso de bases de datos y formularios.
               </p>
               <a
                 class="btn btn-primary"
@@ -348,45 +354,10 @@
       </div>
     </div>
 
-    <!-- Modales -->
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     
+
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white bg-dark" >
+    <footer class="text-center text-lg-start text-white bg-dark">
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Links -->
@@ -397,29 +368,44 @@
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">CodeXpert</h6>
               <p>
-                Aprende programación de manera práctica y conviértete en un experto en 
-                tecnologías como Java, React, Spring Boot y más. ¡Impulsa tu carrera hoy! <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
+                Aprende programación de manera práctica y conviértete en un
+                experto en tecnologías como Java, React, Spring Boot y más.
+                ¡Impulsa tu carrera hoy!
+                <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
               </p>
             </div>
             <!-- Grid column -->
-    
+
             <hr class="w-100 clearfix d-md-none" />
-    
+
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">SERVICIO AL CLIENTE</h6>
-              <p><a class="text-white text-decoration-none" href="#!">Términos y condiciones de uso</a></p>
-              <p><a class="text-white text-decoration-none" href="#!">Política de reembolsos</a></p>
-              <p><a class="text-white text-decoration-none" href="#!">Preguntas frecuentes</a></p>
-              
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                SERVICIO AL CLIENTE
+              </h6>
+              <p>
+                <a class="text-white text-decoration-none" href="#!"
+                  >Términos y condiciones de uso</a
+                >
+              </p>
+              <p>
+                <a class="text-white text-decoration-none" href="#!"
+                  >Política de reembolsos</a
+                >
+              </p>
+              <p>
+                <a class="text-white text-decoration-none" href="#!"
+                  >Preguntas frecuentes</a
+                >
+              </p>
             </div>
             <!-- Grid column -->
-    
+
             <hr class="w-100 clearfix d-md-none" />
-    
+
             <!-- Grid column -->
             <hr class="w-100 clearfix d-md-none" />
-    
+
             <!-- Grid column -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">CONTÁCTANOS</h6>
@@ -427,32 +413,50 @@
               <p><i class="bi bi-telephone mr-3"></i> + 01 234 567 88</p>
             </div>
             <!-- Grid column -->
-    
+
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
               <div class="social-icons justify-content-center">
-                <a target="_blank" href="https://www.facebook.com/?ref=logo" class="social-icon bg-primary"><i class="bi bi-facebook"></i></a>
-                <a target="_blank" href="https://x.com/" class="social-icon bg-info"><i class="bi bi-twitter"></i></a>
-                <a target="_blank" href="https://www.instagram.com/" class="social-icon bg-danger"><i class="bi bi-instagram"></i></a>
-                <a target="_blank" href="https://github.com/Falexblas/Marcos-de-desarrollo-web" class="social-icon bg-secondary"><i class="bi bi-github"></i></a>
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/?ref=logo"
+                  class="social-icon bg-primary"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://x.com/"
+                  class="social-icon bg-info"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  class="social-icon bg-danger"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://github.com/Falexblas/Marcos-de-desarrollo-web"
+                  class="social-icon bg-secondary"
+                  ><i class="bi bi-github"></i
+                ></a>
               </div>
             </div>
-            
           </div>
           <!--Grid row-->
         </section>
         <!-- Section: Links -->
       </div>
       <!-- Grid container -->
-    
+
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2025 Copyright
       </div>
       <!-- Copyright -->
     </footer>
-    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -460,28 +464,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      const exampleModal = document.getElementById('exampleModal');
-    
-      exampleModal.addEventListener('show.bs.modal', function (event) {
-        const button = event.relatedTarget;
-        const title = button.getAttribute('data-title');
-        const url = button.getAttribute('data-url');
-    
-        const modalTitle = exampleModal.querySelector('.modal-title');
-        const modalBody = exampleModal.querySelector('.modal-body');
-        const modalFooter = exampleModal.querySelector('.modal-footer');
-    
-        modalTitle.textContent = title;
-        modalBody.innerHTML = `¿Deseas ir al contenido completo de este curso?`;
-    
-        // Reemplazar botones del footer
-        modalFooter.innerHTML = `
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <a href="${url}" class="btn btn-primary">Ir al curso</a>
-        `;
-      });
-    </script>
     <script src="script.js"></script>
+    <script src="cursos/cursos.js"></script>
   </body>
 </html>

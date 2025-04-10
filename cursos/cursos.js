@@ -477,7 +477,7 @@ if (curso) {
     document.querySelector('.info-extra p').textContent = `📅 ${curso.fecha} ⏱ ${curso.duracion} 📈 ${curso.nivel}`;
 
     // Botón de compra
-    document.getElementById('btnAgregarCarrito').innerHTML = `🛒 Compra solo este curso por <del>S/25</del> ${curso.precio}`;
+    document.getElementById('btnAgregarCarrito').innerHTML = `🛒 Compra solo este curso por <del>S/69</del> ${curso.precio}`;
 
     // Imagen del curso
     document.querySelector('.imagen-curso img').src = curso.imagen;
@@ -517,13 +517,104 @@ if (curso) {
 
   // Llenar los datos del curso
   llenarDatosCurso(curso);
-} else {
-  // Mostrar mensaje si el curso no se encuentra
-  document.body.innerHTML = `
-    <div class="container text-center mt-5">
-      <h1 class="display-4">Curso no encontrado</h1>
-      <p class="lead">Lo sentimos, el curso que buscas no está disponible.</p>
-      <a href="/Cursos.html" class="btn btn-primary">Volver a la lista de cursos</a>
+} 
+
+// Elementos del DOM
+const btnAgregar = document.getElementById('btnAgregarCarrito');
+const carritoIcono = document.querySelector('.bi-cart').closest('a');
+const carrito = document.getElementById('carrito');
+const overlay = document.getElementById('carrito-overlay');
+const contenido = document.getElementById('carrito-contenido');
+const total = document.getElementById('carrito-total');
+
+// Cargar el carrito desde localStorage al iniciar
+let carritoCursos = JSON.parse(localStorage.getItem('carrito')) || [];
+
+// Función para obtener los datos del curso desde el HTML dinámicamente
+function obtenerDatosCursoDesdeHTML() {
+  const nombre = document.getElementById('curso-nombre')?.textContent.trim();
+  const imagen = document.getElementById('curso-imagen')?.getAttribute('src');
+  
+  // Extraer el precio con descuento (el último precio en el texto del botón)
+  const precioTexto = document.getElementById('btnAgregarCarrito')?.textContent;
+  const precios = precioTexto?.matchAll(/S\/(\d+)/g); // Encuentra todos los precios
+  const preciosArray = precios ? Array.from(precios) : []; // Convertir a array
+  const precioOferta = preciosArray.length > 1 ? parseFloat(preciosArray[preciosArray.length - 1][1]) : 0;
+
+  return { nombre, imagen, precioOferta };
+}
+
+// Mostrar carrito
+function mostrarCarrito() {
+  // Generar el HTML para todos los cursos en el carrito
+  contenido.innerHTML = carritoCursos.map((curso, index) => generarHTMLCurso(curso, index)).join('');
+  actualizarTotal(); // Actualizar el total del carrito
+  carrito.classList.add('activo'); // Mostrar el carrito
+  overlay.classList.add('activo'); // Mostrar el fondo oscuro
+}
+
+// Cerrar carrito
+overlay.addEventListener('click', () => {
+  carrito.classList.remove('activo'); // Ocultar el carrito
+  overlay.classList.remove('activo'); // Ocultar el fondo oscuro
+});
+
+// Abrir carrito desde el ícono del navbar
+if (carritoIcono) {
+  carritoIcono.addEventListener('click', (e) => {
+    e.preventDefault();
+    mostrarCarrito(); // Mostrar el carrito
+  });
+}
+
+// Abrir desde botón "Agregar al carrito" (solo en detalle-curso.html)
+if (btnAgregar) {
+  btnAgregar.addEventListener('click', () => {
+    const cursoActual = obtenerDatosCursoDesdeHTML();
+
+    // Evitar duplicados
+    const yaExiste = carritoCursos.some(c => c.nombre === cursoActual.nombre);
+    if (!yaExiste) {
+      carritoCursos.push(cursoActual); // Agregar el curso al carrito
+      localStorage.setItem('carrito', JSON.stringify(carritoCursos)); // Guardar en localStorage
+    }
+
+    mostrarCarrito(); // Actualizar la vista del carrito
+  });
+}
+
+// Generar contenido HTML para un curso
+function generarHTMLCurso(curso, index) {
+  return `
+    <div class="carrito-item">
+      <img src="${curso.imagen}" alt="${curso.nombre}" />
+      <div class="carrito-item-info">
+        <p class="mb-1 fw-bold">${curso.nombre}</p>
+        <p class="text-success">S/${curso.precioOferta.toFixed(2)} PEN</p>
+      </div>
+      <i class="bi bi-trash-fill" onclick="eliminarDelCarrito(${index})"></i>
     </div>
   `;
+}
+
+// Eliminar un curso del carrito
+function eliminarDelCarrito(index) {
+  carritoCursos.splice(index, 1); // Eliminar el curso del arreglo
+  localStorage.setItem('carrito', JSON.stringify(carritoCursos)); // Actualizar localStorage
+  mostrarCarrito(); // Actualizar la vista del carrito
+}
+
+// Calcular el total del carrito
+function actualizarTotal() {
+  const totalValor = carritoCursos.reduce((acc, curso) => acc + curso.precioOferta, 0);
+  total.textContent = `S/${totalValor.toFixed(2)} PEN`;
+}
+
+// Cerrar carrito al hacer clic en el botón de cierre
+const cerrarCarritoBtn = document.getElementById('cerrar-carrito');
+if (cerrarCarritoBtn) {
+  cerrarCarritoBtn.addEventListener('click', () => {
+    carrito.classList.remove('activo'); // Ocultar el carrito
+    overlay.classList.remove('activo'); // Ocultar el fondo oscuro
+  });
 }
