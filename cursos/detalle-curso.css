@@ -96,7 +96,7 @@ body {
   }
   
   .imagen-curso img {
-    max-width: 300px;
+  max-width: 350px;
     border-radius: 12px;
     margin-top: 1rem;
   }
