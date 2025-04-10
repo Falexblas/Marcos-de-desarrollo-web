@@ -46,22 +46,26 @@
             <li class="nav-item">
               <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
             </li>
+
             <li class="nav-item">
               <a class="nav-link text-white" href="Cursos.html">Cursos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="Nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">
-                <i class="bi bi-person"></i> <!-- Icono de usuario -->
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person"></i> <span id="username">Usuario</span>
               </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="userDropdown">
+                <li><a class="dropdown-item" href="#" id="userActionBtn">Acción</a></li>
+              </ul>
             </li>
+            
             <li class="nav-item">
               <a class="nav-link text-white" href="carrito.html">
                 <i class="bi bi-cart"></i> <!-- Icono de carrito -->
               </a>
             </li>
+
           </ul>
         </div>
       </div>
@@ -482,6 +486,35 @@
         `;
       });
     </script>
+
+    <!-- script para mostrar el nombre del usuario  -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const usuario = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+        const usernameSpan = document.getElementById("username");
+        const userActionBtn = document.getElementById("userActionBtn");
+    
+        if (usuario && usuario.name) {
+          usernameSpan.textContent = usuario.name;
+          userActionBtn.textContent = "Cerrar sesión";
+          userActionBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            localStorage.removeItem("usuarioRegistrado");
+            alert("Sesión cerrada correctamente.");
+            window.location.href = "login.html";
+          });
+        } else {
+          usernameSpan.textContent = "Invitado";
+          userActionBtn.textContent = "Iniciar sesión";
+          userActionBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.location.href = "login.html";
+          });
+        }
+      });
+    </script>
+    
     <script src="script.js"></script>
   </body>
 </html>
