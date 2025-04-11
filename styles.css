@@ -189,6 +189,16 @@ hr {
   transform: scale(1.2); /* Agrandar el ícono al pasar el ratón */
 }
 
+/* Estilo del botón "Continuar compra" */
+.btn-success {
+  border-radius: 8px; /* Bordes redondeados */
+  transition: transform 0.2s ease; /* Animación al pasar el ratón */
+}
+
+.btn-success:hover {
+  transform: scale(1.05); /* Agrandar ligeramente al pasar el ratón */
+}
+
 /* Reducir el ancho del carrito en pantallas pequeñas */
 @media (max-width: 480px) {
   .carrito-lateral {
