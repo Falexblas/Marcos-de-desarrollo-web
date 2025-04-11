@@ -27,31 +27,44 @@
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
-  
+    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active text-white" href="/index.html">Inicio</a>
             </li>
-
+    
             <li class="nav-item">
               <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
             </li>
+    
+            <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
             <li class="nav-item">
-              <a class="nav-link text-white" href="#"><i class="bi bi-person"></i></a>
+              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person"></i> <span id="usernameDisplay">Invitado</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
+                <li><a class="dropdown-item" href="login.html" id="loginLink">Iniciar sesión</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <!-- Solo mostrar "Cerrar sesión" si hay un usuario logueado -->
+                <li><a class="dropdown-item" href="#" onclick="cerrarSesion()" id="cerrarSesionLink" style="display: none;">Cerrar sesión</a></li>
+              </ul>
             </li>
-            
+    
             <li class="nav-item">
               <a class="nav-link text-white" href="#"><i class="bi bi-cart"></i></a>
             </li>
-
           </ul>
         </div>
       </div>
     </nav>
+    
+    
+    
 
 <!-- Carrito lateral desde la derecha -->
 <div id="carrito" class="carrito-lateral bg-dark text-white p-4 shadow">
@@ -441,6 +454,44 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      // Obtener el nombre del usuario de localStorage
+      const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
+    
+      // Si el usuario está logueado
+      if (usuarioGuardado) {
+        const username = usuarioGuardado.name;
+        document.getElementById("usernameDisplay").textContent = username;
+    
+        // Cambiar "Iniciar sesión" por "Cerrar sesión"
+        document.getElementById("loginLink").textContent = "Cerrar sesión";
+        document.getElementById("loginLink").setAttribute("href", "#");  // No redirigir si está logueado
+        document.getElementById("cerrarSesionLink").style.display = "block"; // Mostrar "Cerrar sesión"
+        
+        // Eliminar "Iniciar sesión" para evitar duplicados
+        document.getElementById("loginLink").parentElement.style.display = "none";
+      } else {
+        // Si no hay usuario, mostrar "Invitado" y solo mostrar "Iniciar sesión"
+        document.getElementById("usernameDisplay").textContent = "Invitado";
+        document.getElementById("loginLink").textContent = "Iniciar sesión";
+        document.getElementById("loginLink").setAttribute("href", "login.html");  // Redirigir al login
+        document.getElementById("cerrarSesionLink").style.display = "none"; // Ocultar "Cerrar sesión"
+        
+        // Asegurarse de que "Iniciar sesión" se muestre si no hay usuario
+        document.getElementById("loginLink").parentElement.style.display = "block";
+      }
+    
+      // Función para cerrar sesión
+      function cerrarSesion() {
+        // Limpiar los datos del usuario en localStorage
+        localStorage.removeItem("usuarioRegistrado");
+    
+        // Redirigir al login
+        window.location.href = "login.html";
+      }
+    </script>
+    
 
     <script src="script.js"></script>
     <script src="cursos/cursos.js"></script>
