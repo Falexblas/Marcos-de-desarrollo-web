@@ -17,173 +17,190 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="img/programacion.png" />
   </head>
-  <body>
+  <body class="bg-light ">
     <!-- Header -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
-          <img src="/img/LOGO.png" alt="logo" class="logo" />
+          <img src="/img/LOGO.png" alt="logo" class="logo w-auto ms-3" />
+          <!-- CAMBIO -->
         </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-    
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" href="/index.html">Inicio</a>
+              <a class="nav-link active text-white" href="/index.html"
+                >Inicio</a
+              >
             </li>
-    
+
             <li class="nav-item">
               <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
             </li>
-    
+
             <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
             <li class="nav-item">
-              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person"></i> <span id="usernameDisplay">Invitado</span>
+              <a
+                class="nav-link text-white"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person"></i>
+                <span id="usernameDisplay">Invitado</span>
               </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
                 <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
-                <li><a class="dropdown-item" href="login.html" id="loginLink">Iniciar sesión</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="login.html" id="loginLink"
+                    >Iniciar sesión</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
                 <!-- Solo mostrar "Cerrar sesión" si hay un usuario logueado -->
-                <li><a class="dropdown-item" href="#" onclick="cerrarSesion()" id="cerrarSesionLink" style="display: none;">Cerrar sesión</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="cerrarSesion()"
+                    id="cerrarSesionLink"
+                    style="display: none"
+                    >Cerrar sesión</a
+                  >
+                </li>
               </ul>
             </li>
-    
+
             <li class="nav-item">
-              <a class="nav-link text-white" href="#"><i class="bi bi-cart"></i></a>
+              <a
+                class="nav-link text-white"
+                href="#"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#carrito"
+              >
+                <i class="bi bi-cart"></i>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    
-    
-    
 
-<!-- Carrito lateral desde la derecha -->
-<div id="carrito" class="carrito-lateral bg-dark text-white p-4 shadow">
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <h4 class="mb-0">🛒 Tu carrito</h4>
-    <button id="cerrar-carrito" class="btn btn-close p-0 m-0 text-white">
-      <i class="bi bi-x" style="font-size: 1.5rem;"></i>
-    </button>
-  </div>
-  <div id="carrito-contenido" class="mt-4">
-    <!-- Curso agregado dinámicamente -->
-  </div>
-  <hr />
-  <div class="d-flex justify-content-between fw-bold">
-    <span>Total:</span>
-    <span id="carrito-total">S/0.00</span>
-  </div>
-   <!-- Botón "Continuar compra" -->
-   <div class="text-end mt-3">
-    <a href="/pago.html" class="btn btn-success">Continuar compra</a>
-  </div>
-</div>
-   <!-- Botón "Continuar compra" -->
-   <div class="text-end mt-3">
-    <a href="/pago.html" class="btn btn-success">Continuar compra</a>
-  </div>
-</div>
-</div>
-
-<!-- Fondo oscuro -->
-<div id="carrito-overlay" class="carrito-overlay"></div>
-
-
-    <!-- Carrusel-->
+    <!-- Carrito lateral desde la derecha -->
     <div
-      id="carouselExampleIndicators"
-      class="carousel slide w-100"
-      data-bs-ride="carousel"
+      id="carrito"
+      class="offcanvas offcanvas-end bg-dark text-white shadow-lg"
     >
-      <!-- Indicadores -->
-      <div class="carousel-indicators"></div>
-
-      <!-- Contenedor de Slides -->
-      <div class="carousel-inner w-100">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div
-            class="card mb-3 p-4 bg-dark text-white w-100"
-            style="margin: auto; border-radius: 0 !important"
-          >
-            <div class="row g-0 align-items-center">
-              <!-- Columna de Texto -->
-              <div class="col-md-6 ps-5">
-                <div class="card-body">
-                  <span class="badge bg-warning text-dark"
-                    >PRÓXIMO LANZAMIENTO</span
-                  >
-                  <h2 class="card-title mt-2">Terraform desde cero</h2>
-                  <p class="card-text">
-                    Aprende a configurar, desplegar y gestionar infraestructuras
-                    en la nube con Terraform, la herramienta líder en IaC.
-                  </p>
-                  <p><i class="bi bi-clock"></i> 5 horas</p>
-                  <button class="btn btn-primary">
-                    <i class="bi bi-cart"></i> Cómpralo por <s>$99</s> S/59
-                    SOLES
-                  </button>
-                </div>
-              </div>
-
-              <!-- Columna de Imagen -->
-              <div class="col-md-6 pe-5">
-                <img
-                  src="img/JAVA.jpg"
-                  class="img-fluid rounded"
-                  style="height: 100%; object-fit: cover"
-                  alt="Curso Terraform"
-                />
-              </div>
-            </div>
-          </div>
+      <div
+        class="offcanvas-header d-flex justify-content-between align-items-center mb-3"
+      >
+        <h4 class="mb-0">🛒 Tu carrito</h4>
+        <button
+          id="cerrar-carrito"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Contenido del carrito -->
+        <div id="carrito-contenido" class="mt-4">
+          <!-- Curso agregado dinámicamente -->
         </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div
-            class="card mb-3 p-4 bg-dark text-white w-100"
-            style="margin: auto; border-radius: 0 !important"
+        <hr class="border border-secondary opacity-25" />
+        <div class="d-flex justify-content-between fw-bold">
+          <span>Total:</span>
+          <span id="carrito-total">S/0.00</span>
+        </div>
+        <!-- Botón "Continuar compra" -->
+        <div class="text-end mt-3">
+          <a href="/pago.html" class="btn btn-success rounded-pill w-100"
+            >Continuar compra</a
           >
-            <div class="row g-0 align-items-center">
-              <div class="col-md-6 ps-5">
-                <div class="card-body">
-                  <span class="badge bg-warning text-dark">NUEVO CURSO</span>
-                  <h2 class="card-title mt-2">Curso de React JS</h2>
-                  <p class="card-text">
-                    Aprende a crear aplicaciones web modernas con React y mejora
-                    tus habilidades de desarrollo frontend.
-                  </p>
-                  <p><i class="bi bi-clock"></i> 10 horas</p>
-                  <button class="btn btn-primary">
-                    <i class="bi bi-cart"></i> Cómpralo por <s>$120</s> S/79
-                    SOLES
-                  </button>
-                </div>
-              </div>
+        </div>
+      </div>
+    </div>
 
-              <div class="col-md-6 pe-5">
-                <img
-                  src="img/CARRUSEL.jpg"
-                  class="img-fluid rounded"
-                  style="height: 100%; object-fit: cover"
-                  alt="Curso React"
-                />
-              </div>
+     <!-- Slider de Cursos -->
+  <section id="cursoCarousel" class="carousel slide bg-dark text-white" data-bs-ride="carousel">
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cursoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#cursoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="container py-4">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6 text-center text-md-start">
+              <span class="badge bg-warning text-dark mb-2">PRÓXIMO LANZAMIENTO</span>
+              <h2 class="fw-bold titulo-slider">Terraform desde cero</h2>
+              <p>Aprende a configurar, desplegar y gestionar infraestructuras en la nube con Terraform, la herramienta líder en IaC.</p>
+              <p><i class="bi bi-clock"></i> 5 horas</p>
+              <button class="btn btn-warning text-dark fw-semibold">
+                <i class="bi bi-cart-fill"></i> Cómpralo por <s>$99</s> S/59 SOLES
+              </button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <img src="img/BANNER1.jpg" class="img-fluid" alt="Curso Terraform">
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="container py-4">
+          <div class="row align-items-center g-4">
+            <div class="col-md-6 text-center text-md-start">
+              <span class="badge bg-warning text-dark mb-2 titulo-slider">NUEVO CURSO</span>
+              <h2 class="fw-bold">Curso de React JS</h2>
+              <p>Aprende a crear aplicaciones web modernas con React y mejora tus habilidades de desarrollo frontend.</p>
+              <p><i class="bi bi-clock"></i> 8 horas</p>
+              <button class="btn btn-warning text-dark fw-semibold">
+                <i class="bi bi-cart-fill"></i> Cómpralo por <s>$120</s> S/79 SOLES
+              </button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <img src="img/BANNER2.jpg" class="img-fluid" alt="Curso React JS">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#cursoCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#cursoCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </section>
+
 
     <!-- Cursos inicio-->
 
@@ -191,7 +208,10 @@
       <div class="row mt-5">
         <div class="col-12 text-left title-container">
           <h2 class="d-inline">Los Cursos Más Populares</h2>
-          <i class="bi bi-fire icon-fire"></i>
+          <i
+            class="bi bi-fire"
+            style="font-size: 2rem; color: #e76429; margin-left: 1rem"
+          ></i>
         </div>
       </div>
     </div>
@@ -201,151 +221,149 @@
       <div class="row">
         <!-- Tarjeta 1 -->
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img
               src="img/python-curso-gratis.jpg"
               class="card-img-top"
               alt="Curso de Python"
             />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso de Python</h5>
               <p class="card-text">
                 Aprende los fundamentos de Python y cómo utilizarlo para
                 desarrollar aplicaciones web, automatización, análisis de datos
                 y más.
               </p>
-              <a href="/cursos/detalle-curso.html?id=2" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <!-- Tarjeta 2 -->
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img src="img/curso-java.jpg" class="card-img-top" alt="..." />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso de Java</h5>
               <p class="card-text">
                 Aprende a programar en Java desde cero, ideal para
                 desarrolladores que quieren crear aplicaciones de escritorio y
                 móviles.
               </p>
-              <a href="/cursos/detalle-curso.html?id=1" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img src="img/curso-react.jpg" class="card-img-top" alt="..." />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso de React</h5>
               <p class="card-text">
                 Domina React.js, una de las bibliotecas más populares para
                 construir interfaces de usuario dinámicas y eficientes.
               </p>
-              <a href="/cursos/detalle-curso.html?id=6" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img src="img/curso-js.jpg" class="card-img-top" alt="..." />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso completo de JavaScript</h5>
               <p class="card-text">
                 Aprende todo lo que necesitas sobre JavaScript para desarrollar
                 aplicaciones web interactivas y dinámicas.
               </p>
-              <a href="/cursos/detalle-curso.html?id=3" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <!-- Tarjeta 3 -->
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img src="img/curso-angular.jpeg" class="card-img-top" alt="..." />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso de AngularFW</h5>
               <p class="card-text">
                 Domina Angular y aprende a construir aplicaciones web robustas y
                 escalables con esta popular framework.
               </p>
-              <a href="/cursos/detalle-curso.html?id=9" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <!-- Tarjeta 4 -->
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img
               src="img/curso-springboot.webp"
               class="card-img-top"
               alt="..."
             />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso de Spring Boot</h5>
               <p class="card-text">
                 Aprende a desarrollar aplicaciones Java con Spring Boot, uno de
                 los frameworks más utilizados en el desarrollo backend.
               </p>
-              <a href="/cursos/detalle-curso.html?id=10" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <!-- Tarjeta 5 -->
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img src="img/curso-css.jpg" class="card-img-top" alt="..." />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso desde cero CSS</h5>
               <p class="card-text">
                 Aprende CSS desde lo básico hasta lo avanzado para crear diseños
                 web modernos y responsivos.
               </p>
-              <a href="/cursos/detalle-curso.html?id=4" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
 
         <!-- Tarjeta 6 -->
         <div class="col-md-3 mb-3">
-          <div class="card">
+          <div class="card h-100">
             <img src="img/curso-php.png" class="card-img-top" alt="..." />
-            <div class="card-body populares">
+            <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso desde cero PHP</h5>
               <p class="card-text">
                 Aprende PHP desde cero para desarrollar aplicaciones web
                 dinámicas, incluyendo el uso de bases de datos y formularios.
               </p>
-              <a href="/cursos/detalle-curso.html?id=11" class="btn btn-primary">
-                Ver contenido
-              </a>
+              <a href="#" class="btn btn-primary mt-auto align-self-center"
+                >Ver contenido</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white bg-dark">
@@ -407,32 +425,47 @@
 
             <!-- Grid column -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
-              <div class="social-icons justify-content-center">
+              <h6 class="text-uppercase mb-4 fw-bold">Síguenos</h6>
+              <div class="d-flex gap-3 justify-content-center">
+                <!-- Facebook -->
                 <a
                   target="_blank"
                   href="https://www.facebook.com/?ref=logo"
-                  class="social-icon bg-primary"
-                  ><i class="bi bi-facebook"></i
-                ></a>
+                  class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+
+                <!-- Twitter -->
                 <a
                   target="_blank"
                   href="https://x.com/"
-                  class="social-icon bg-info"
-                  ><i class="bi bi-twitter"></i
-                ></a>
+                  class="btn btn-info rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-twitter"></i>
+                </a>
+
+                <!-- Instagram -->
                 <a
                   target="_blank"
                   href="https://www.instagram.com/"
-                  class="social-icon bg-danger"
-                  ><i class="bi bi-instagram"></i
-                ></a>
+                  class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+
+                <!-- GitHub -->
                 <a
                   target="_blank"
                   href="https://github.com/Falexblas/Marcos-de-desarrollo-web"
-                  class="social-icon bg-secondary"
-                  ><i class="bi bi-github"></i
-                ></a>
+                  class="btn btn-secondary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
               </div>
             </div>
           </div>
@@ -443,7 +476,10 @@
       <!-- Grid container -->
 
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div
+        class="text-center p-3 mt-2"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
         © 2025 Copyright
       </div>
       <!-- Copyright -->
@@ -457,41 +493,46 @@
 
     <script>
       // Obtener el nombre del usuario de localStorage
-      const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
-    
+      const usuarioGuardado = JSON.parse(
+        localStorage.getItem("usuarioRegistrado")
+      );
+
       // Si el usuario está logueado
       if (usuarioGuardado) {
         const username = usuarioGuardado.name;
         document.getElementById("usernameDisplay").textContent = username;
-    
+
         // Cambiar "Iniciar sesión" por "Cerrar sesión"
         document.getElementById("loginLink").textContent = "Cerrar sesión";
-        document.getElementById("loginLink").setAttribute("href", "#");  // No redirigir si está logueado
+        document.getElementById("loginLink").setAttribute("href", "#"); // No redirigir si está logueado
         document.getElementById("cerrarSesionLink").style.display = "block"; // Mostrar "Cerrar sesión"
-        
+
         // Eliminar "Iniciar sesión" para evitar duplicados
-        document.getElementById("loginLink").parentElement.style.display = "none";
+        document.getElementById("loginLink").parentElement.style.display =
+          "none";
       } else {
         // Si no hay usuario, mostrar "Invitado" y solo mostrar "Iniciar sesión"
         document.getElementById("usernameDisplay").textContent = "Invitado";
         document.getElementById("loginLink").textContent = "Iniciar sesión";
-        document.getElementById("loginLink").setAttribute("href", "login.html");  // Redirigir al login
+        document.getElementById("loginLink").setAttribute("href", "login.html"); // Redirigir al login
         document.getElementById("cerrarSesionLink").style.display = "none"; // Ocultar "Cerrar sesión"
-        
+
         // Asegurarse de que "Iniciar sesión" se muestre si no hay usuario
-        document.getElementById("loginLink").parentElement.style.display = "block";
+        document.getElementById("loginLink").parentElement.style.display =
+          "block";
       }
-    
+
       // Función para cerrar sesión
       function cerrarSesion() {
         // Limpiar los datos del usuario en localStorage
         localStorage.removeItem("usuarioRegistrado");
-    
+
         // Redirigir al login
         window.location.href = "login.html";
       }
+
+      
     </script>
-    
 
     <script src="script.js"></script>
     <script src="cursos/cursos.js"></script>

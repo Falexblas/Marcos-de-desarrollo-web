@@ -1,9 +1,6 @@
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
+body { 
     padding-top: 80px; /* espacio para navbar fija */
-    background-color: #0d1117;
-    color: #e6edf3;
+
   }
   
   h1, h2, h3, h4 {
@@ -21,13 +18,9 @@ body {
     padding: 2rem;
   }
   
-  .navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  }
+
   
-  .logo {
-    height: 40px;
-  }
+
   
   .curso-detalle {
     display: flex;
@@ -188,121 +181,77 @@ body {
     }
   }
   
- /* Estilo del carrito lateral */
-.carrito-lateral {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 350px;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
-  backdrop-filter: blur(10px); /* Efecto de desenfoque */
-  border-left: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para separar del contenido principal */
-  transition: right 0.3s ease;
-  z-index: 1050;
-  overflow-y: auto;
-  padding: 20px;
-  color: #fff; /* Texto blanco */
-}
-
-.carrito-lateral.activo {
-  right: 0;
-}
-
-/* Estilo del overlay (fondo oscuro con desenfoque) */
-.carrito-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-  backdrop-filter: blur(5px); /* Efecto de desenfoque */
-  z-index: 1049;
-  display: none;
-}
-
-.carrito-overlay.activo {
-  display: block;
-}
-
-/* Estilo de los elementos del carrito */
+  /* Estilo de los elementos del carrito */
 .carrito-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Usa flexbox para una disposición flexible */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
   margin-bottom: 1rem;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para cada ítem */
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: transform 0.2s ease; /* Efecto hover suave */
 }
 
 .carrito-item:hover {
-  transform: scale(1.02); /* Efecto hover para destacar el ítem */
+  transform: scale(1.02); /* Amplía ligeramente el elemento al pasar el ratón */
 }
 
 .carrito-item img {
-  width: 100px;
-  height: 60px;
+  width: 100px; /* Ancho fijo para las imágenes */
+  height: 60px; /* Altura fija para las imágenes */
   object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
-  border-radius: 8px;
-  margin-right: 10px;
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  flex-shrink: 0; /* Evita que la imagen se reduzca en pantallas pequeñas */
 }
 
 .carrito-item-info {
-  flex: 1;
+  flex: 1; /* Hace que el contenedor de información ocupe el espacio restante */
+  display: flex; /* Usa flexbox para organizar el contenido */
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center; /* Centra verticalmente el contenido */
+  overflow: hidden; /* Maneja el desbordamiento de texto largo */
 }
 
 .carrito-item-info p {
-  margin: 0;
-  font-size: 14px;
+  margin: 0; /* Elimina márgenes innecesarios */
+  font-size: 14px; /* Tamaño de fuente consistente */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el texto que excede el ancho */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para texto largo */
 }
 
 .carrito-item-info p:first-child {
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-weight: bold; /* Nombre del curso en negrita */
+  margin-bottom: 5px; /* Espaciado entre el nombre y el precio */
 }
 
-.carrito-item i {
+/* Icono de eliminar */
+.carrito-item i.bi-trash-fill {
   cursor: pointer;
   color: red;
   font-size: 18px;
+  margin-left: auto; /* Alinea el icono a la derecha */
   transition: color 0.2s ease;
 }
 
-.carrito-item i:hover {
-  color: darkred; /* Cambio de color al pasar el ratón */
+.carrito-item i.bi-trash-fill:hover {
+  color: darkred;
 }
 
 /* Estilo del total */
 #carrito-total {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: right;
-  margin-top: 20px;
+  font-size: 18px; /* Tamaño de fuente para el total */
+  font-weight: bold; /* Negrita para destacar el total */
+  text-align: right; /* Alineación a la derecha */
+  margin-top: 10px; /* Espaciado superior */
 }
 
 /* Separador */
 hr {
-  border: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 20px 0;
-}
-
-/* Botón de cerrar */
-#cerrar-carrito {
-  font-size: 24px; /* Tamaño del ícono */
-  color: #fff; /* Color blanco */
-  background: none; /* Sin fondo */
-  border: none; /* Sin borde */
-  cursor: pointer; /* Indicador de clic */
-  transition: transform 0.2s ease; /* Animación al pasar el ratón */
-  padding: 0; /* Eliminar padding predeterminado */
-}
-
-#cerrar-carrito:hover {
-  transform: scale(1.2); /* Agrandar el ícono al pasar el ratón */
+  border: 0; /* Sin borde predeterminado */
+  height: 1px; /* Altura del separador */
+  background: rgba(255, 255, 255, 0.2); /* Color semi-transparente */
+  margin: 20px 0; /* Espaciado alrededor del separador */
 }

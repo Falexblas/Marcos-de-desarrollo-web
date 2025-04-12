@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devverso - Cursos</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,56 +14,81 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="img/programacion.png" />
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(to bottom, #0f172a, #1e293b);
-        color: #f1f5f9;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
   </head>
-  <body>
+  <body class="cursos-page pt-5">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="/img/LOGO.png" alt="logo" class="logo" />
+        <a class="navbar-brand" href="index.html">
+          <img src="/img/LOGO.png" alt="logo" class="logo w-auto ms-3" />
         </a>
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <button
+          class="navbar-toggler bg-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" href="/index.html">Inicio</a>
+              <a class="nav-link active text-white" href="/index.html"
+                >Inicio</a
+              >
             </li>
-    
             <li class="nav-item">
               <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
             </li>
-    
             <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
             <li class="nav-item">
-              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person"></i> <span id="usernameDisplay">Invitado</span>
+              <a
+                class="nav-link text-white"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person"></i>
+                <span id="usernameDisplay">Invitado</span>
               </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="userDropdown"
+              >
                 <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
-                <li><a class="dropdown-item" href="login.html" id="loginLink">Iniciar sesión</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="login.html" id="loginLink"
+                    >Iniciar sesión</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
                 <!-- Solo mostrar "Cerrar sesión" si hay un usuario logueado -->
-                <li><a class="dropdown-item" href="#" onclick="cerrarSesion()" id="cerrarSesionLink" style="display: none;">Cerrar sesión</a></li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    onclick="cerrarSesion()"
+                    id="cerrarSesionLink"
+                    style="display: none"
+                    >Cerrar sesión</a
+                  >
+                </li>
               </ul>
             </li>
-    
             <li class="nav-item">
-              <a class="nav-link text-white" href="#"><i class="bi bi-cart"></i></a>
+              <a
+                class="nav-link text-white"
+                href="#"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#carrito"
+              >
+                <i class="bi bi-cart"></i>
+              </a>
             </li>
           </ul>
         </div>
@@ -72,31 +96,44 @@
     </nav>
 
     <!-- Carrito lateral desde la derecha -->
-    <div id="carrito" class="carrito-lateral bg-dark text-white p-4 shadow">
-      <div class="d-flex justify-content-between align-items-center mb-3">
+    <div
+      id="carrito"
+      class="offcanvas offcanvas-end bg-dark text-white shadow-lg"
+    >
+      <div
+        class="offcanvas-header d-flex justify-content-between align-items-center mb-3"
+      >
         <h4 class="mb-0">🛒 Tu carrito</h4>
-        <button id="cerrar-carrito" class="btn btn-close p-0 m-0 text-white">
-          <i class="bi bi-x" style="font-size: 1.5rem"></i>
-        </button>
+        <button
+          id="cerrar-carrito"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
-      <div id="carrito-contenido" class="mt-4">
-        <!-- Curso agregado dinámicamente -->
-      </div>
-      <hr />
-      <div class="d-flex justify-content-between fw-bold">
-        <span>Total:</span>
-        <span id="carrito-total">S/0.00</span>
+      <div class="offcanvas-body">
+        <!-- Contenido del carrito -->
+        <div id="carrito-contenido" class="mt-4">
+          <!-- Curso agregado dinámicamente -->
+        </div>
+        <hr class="border border-secondary opacity-25" />
+        <div class="d-flex justify-content-between fw-bold">
+          <span>Total:</span>
+          <span id="carrito-total">S/0.00</span>
+        </div>
+        <!-- Botón "Continuar compra" -->
+        <div class="text-end mt-3">
+          <a href="/pago.html" class="btn btn-success rounded-pill w-100"
+            >Continuar compra</a
+          >
+        </div>
       </div>
     </div>
 
-    <!-- Fondo oscuro -->
-    <div id="carrito-overlay" class="carrito-overlay"></div>
-
     <!-- Contenido -->
-    <div class="container" style="margin-top: 100px">
+    <div class="container" style="margin-top: 1px">
       <h1 class="mb-4">Nuestros Cursos</h1>
       <p>Explora los cursos que ofrecemos para potenciar tus habilidades.</p>
-
       <!-- Buscador -->
       <div class="input-group mb-4">
         <input
@@ -112,23 +149,29 @@
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-5" id="lista-cursos">
         <!-- Curso 1 -->
         <div class="col curso">
-          <div class="card h-100">
-            <img src="img/java.jpg" class="card-img-top" alt="Curso de Java" />
+          <div class="card curso-card h-100">
+            <img src="img/curso-java.jpg" class="card-img-top" alt="Curso de Java" />
             <div class="card-body">
               <h5 class="card-title">Curso de Java</h5>
               <p class="card-text">
                 Aprende Java desde cero con ejemplos prácticos.
               </p>
-              <a href="/cursos/detalle-curso.html?id=1" class="btn btn-primary">
-                Ver más
-              </a>
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=1"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/30.00 PEN</span>
+                <button id="btnAgregarCarrito"  class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 2 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/python-curso-gratis.jpg"
               class="card-img-top"
@@ -139,16 +182,22 @@
               <p class="card-text">
                 Aprende Python desde cero con ejemplos prácticos.
               </p>
-              <a href="/cursos/detalle-curso.html?id=2" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=2"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/15.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 3 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-js.jpg"
               class="card-img-top"
@@ -159,36 +208,48 @@
               <p class="card-text">
                 Aprende JavaScript con ejemplos interactivos.
               </p>
-              <a href="/cursos/detalle-curso.html?id=3" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=3"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/25.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 4 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-css.jpg"
               class="card-img-top"
-              alt="Curso de C++"
+              alt="Curso de CSS"
             />
             <div class="card-body">
               <h5 class="card-title">Curso de CSS</h5>
               <p class="card-text">
                 Aprende CSS desde cero con ejemplos prácticos.
               </p>
-              <a href="/cursos/detalle-curso.html?id=4" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=4"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/20.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 5 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-html.jpg"
               class="card-img-top"
@@ -197,16 +258,22 @@
             <div class="card-body">
               <h5 class="card-title">Curso de HTML</h5>
               <p class="card-text">Aprende a crear páginas web con HTML.</p>
-              <a href="/cursos/detalle-curso.html?id=5" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=5"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/10.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 6 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-react.jpg"
               class="card-img-top"
@@ -215,16 +282,22 @@
             <div class="card-body">
               <h5 class="card-title">Curso de React JS</h5>
               <p class="card-text">Aprende a crear páginas web con React JS.</p>
-              <a href="/cursos/detalle-curso.html?id=6" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=6"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/25.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 7 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-typescript.png"
               class="card-img-top"
@@ -233,16 +306,22 @@
             <div class="card-body">
               <h5 class="card-title">Curso de TypeScript</h5>
               <p class="card-text">Aprende TypeScript desde cero.</p>
-              <a href="/cursos/detalle-curso.html?id=7" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=7"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/20.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 8 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-git-github.jpg"
               class="card-img-top"
@@ -251,16 +330,22 @@
             <div class="card-body">
               <h5 class="card-title">Curso de Git y GitHub</h5>
               <p class="card-text">Aprende a usar Git y GitHub.</p>
-              <a href="/cursos/detalle-curso.html?id=8" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=8"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/10.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 9 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-angular.jpeg"
               class="card-img-top"
@@ -269,16 +354,22 @@
             <div class="card-body">
               <h5 class="card-title">Curso de Angular FW</h5>
               <p class="card-text">Aprende Angular FW desde cero.</p>
-              <a href="/cursos/detalle-curso.html?id=9" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=9"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/30.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 10 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-springboot.webp"
               class="card-img-top"
@@ -287,16 +378,22 @@
             <div class="card-body">
               <h5 class="card-title">Curso de Spring Boot</h5>
               <p class="card-text">Aprende Spring Boot desde cero.</p>
-              <a href="/cursos/detalle-curso.html?id=10" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=10"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/35.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 11 -->
         <div class="col curso">
-          <div class="card h-100">
+          <div class="card curso-card h-100">
             <img
               src="img/curso-php.png"
               class="card-img-top"
@@ -305,26 +402,27 @@
             <div class="card-body">
               <h5 class="card-title">Curso de PHP</h5>
               <p class="card-text">Aprende PHP desde cero.</p>
-              <a href="/cursos/detalle-curso.html?id=11" class="btn btn-primary"
-                >Ver más</a
-              >
+              <div class="d-flex justify-content-between align-items-center">
+                <a
+                  href="/cursos/detalle-curso.html?id=11"
+                  class="btn btn-primary me-2"
+                  >Ver más</a
+                >
+                <span class="card-price">S/20.00 PEN</span>
+                <button class="btn btn-success">Comprar</button>
+              </div>
             </div>
           </div>
         </div>
-
-        <!-- Puedes agregar hasta el curso 15 si deseas -->
       </div>
     </div>
 
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white bg-dark">
-      <!-- Grid container -->
       <div class="container p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
+        <section>
           <div class="row">
-            <!-- Grid column -->
+            <!-- Columna 1 -->
             <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">CodeXpert</h6>
               <p>
@@ -334,88 +432,91 @@
                 <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
               </p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
+            <!-- Columna 2 -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">
                 SERVICIO AL CLIENTE
               </h6>
               <p>
-                <a class="text-white text-decoration-none" href="#!"
+                <a class="text-white text-decoration-none" href="#"
                   >Términos y condiciones de uso</a
                 >
               </p>
               <p>
-                <a class="text-white text-decoration-none" href="#!"
+                <a class="text-white text-decoration-none" href="#"
                   >Política de reembolsos</a
                 >
               </p>
               <p>
-                <a class="text-white text-decoration-none" href="#!"
+                <a class="text-white text-decoration-none" href="#"
                   >Preguntas frecuentes</a
                 >
               </p>
             </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
+            <!-- Columna 3 -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
               <h6 class="text-uppercase mb-4 font-weight-bold">CONTÁCTANOS</h6>
               <p><i class="bi bi-envelope mr-3"></i> CodeXpert@gmail.com</p>
               <p><i class="bi bi-telephone mr-3"></i> + 01 234 567 88</p>
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
+            <!-- Columna 4 -->
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Síguenos</h6>
-              <div class="social-icons justify-content-center">
-                <a href="#!" class="social-icon bg-primary"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a href="#!" class="social-icon bg-info"
-                  ><i class="bi bi-twitter"></i
-                ></a>
-                <a href="#!" class="social-icon bg-danger"
-                  ><i class="bi bi-instagram"></i
-                ></a>
-                <a href="#!" class="social-icon bg-secondary"
-                  ><i class="bi bi-github"></i
-                ></a>
+              <h6 class="text-uppercase mb-4 fw-bold">Síguenos</h6>
+              <div class="d-flex gap-3 justify-content-center">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/?ref=logo"
+                  class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://x.com/"
+                  class="btn btn-info rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-twitter"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/Falexblas/Marcos-de-desarrollo-web"
+                  class="btn btn-secondary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
               </div>
             </div>
           </div>
-          <!--Grid row-->
         </section>
-        <!-- Section: Links -->
       </div>
-      <!-- Grid container -->
-
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      <div
+        class="text-center p-3 mt-2"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
         © 2025 Copyright
       </div>
-      <!-- Copyright -->
     </footer>
 
-    <!-- Bootstrap Bundle JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="cursos/cursos.js"></script>
-
-    <!-- Buscador Script -->
     <script>
+      // Buscador Script
       (function () {
         const buscador = document.getElementById("buscador");
         const listaCursos = document.querySelectorAll(".curso");
-    
         buscador.addEventListener("input", function () {
           const texto = this.value.toLowerCase();
           listaCursos.forEach((curso) => {
@@ -425,44 +526,31 @@
         });
       })();
     </script>
-
-<script>
-  // Obtener el nombre del usuario de localStorage
-  const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
-
-  // Si el usuario está logueado
-  if (usuarioGuardado) {
-    const username = usuarioGuardado.name;
-    document.getElementById("usernameDisplay").textContent = username;
-
-    // Cambiar "Iniciar sesión" por "Cerrar sesión"
-    document.getElementById("loginLink").textContent = "Cerrar sesión";
-    document.getElementById("loginLink").setAttribute("href", "#");  // No redirigir si está logueado
-    document.getElementById("cerrarSesionLink").style.display = "block"; // Mostrar "Cerrar sesión"
-    
-    // Eliminar "Iniciar sesión" para evitar duplicados
-    document.getElementById("loginLink").parentElement.style.display = "none";
-  } else {
-    // Si no hay usuario, mostrar "Invitado" y solo mostrar "Iniciar sesión"
-    document.getElementById("usernameDisplay").textContent = "Invitado";
-    document.getElementById("loginLink").textContent = "Iniciar sesión";
-    document.getElementById("loginLink").setAttribute("href", "login.html");  // Redirigir al login
-    document.getElementById("cerrarSesionLink").style.display = "none"; // Ocultar "Cerrar sesión"
-    
-    // Asegurarse de que "Iniciar sesión" se muestre si no hay usuario
-    document.getElementById("loginLink").parentElement.style.display = "block";
-  }
-
-  // Función para cerrar sesión
-  function cerrarSesion() {
-    // Limpiar los datos del usuario en localStorage
-    localStorage.removeItem("usuarioRegistrado");
-
-    // Redirigir al login
-    window.location.href = "login.html";
-  }
-</script>
-
-    
+    <script>
+      // Funcionalidad de inicio de sesión y cierre de sesión
+      const usuarioGuardado = JSON.parse(
+        localStorage.getItem("usuarioRegistrado")
+      );
+      if (usuarioGuardado) {
+        const username = usuarioGuardado.name;
+        document.getElementById("usernameDisplay").textContent = username;
+        document.getElementById("loginLink").textContent = "Cerrar sesión";
+        document.getElementById("loginLink").setAttribute("href", "#");
+        document.getElementById("cerrarSesionLink").style.display = "block";
+        document.getElementById("loginLink").parentElement.style.display =
+          "none";
+      } else {
+        document.getElementById("usernameDisplay").textContent = "Invitado";
+        document.getElementById("loginLink").textContent = "Iniciar sesión";
+        document.getElementById("loginLink").setAttribute("href", "login.html");
+        document.getElementById("cerrarSesionLink").style.display = "none";
+        document.getElementById("loginLink").parentElement.style.display =
+          "block";
+      }
+      function cerrarSesion() {
+        localStorage.removeItem("usuarioRegistrado");
+        window.location.href = "login.html";
+      }
+    </script>
   </body>
 </html>

@@ -6,181 +6,85 @@
   <title>Devverso</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="nosotros.css" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="img/programacion.png">
-  <style>
-    /* Estilos generales */
-    body {
-      background-color: #f8f9fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    /* Estilos para el header */
-    .hero-section {
-      background: linear-gradient(135deg, #2c3e50, #3498db);
-      color: white;
-      padding: 4rem 0;
-      margin-bottom: 3rem;
-      border-radius: 0 0 20px 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
-    .hero-title {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    }
-    
-    .hero-subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    
-    /* Estilos para el acordeón */
-    .accordion-button:not(.collapsed) {
-      background-color: rgba(52, 152, 219, 0.1);
-      color: #2c3e50;
-      font-weight: 600;
-    }
-    
-    .accordion-button {
-      font-weight: 500;
-      padding: 1.2rem 1.25rem;
-    }
-    
-    .accordion-button:focus {
-      box-shadow: none;
-      border-color: rgba(0,0,0,.125);
-    }
-    
-    .accordion-item {
-      border: none;
-      margin-bottom: 15px;
-      border-radius: 10px !important;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-    
-    .accordion-item:hover {
-      transform: translateY(-3px);
-    }
-    
-    .accordion-body {
-      padding: 1.5rem;
-    }
-    
-    /* Estilos para las cards internas */
-    .feature-card {
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-      margin-bottom: 1.5rem;
-    }
-    
-    .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    }
-    
-    .feature-card .card-body {
-      padding: 1.8rem;
-    }
-    
-    .card-title {
-      color: #2c3e50;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
-    
-    .text-primary {
-      color: #3498db !important;
-    }
-    
-    /* Estilos para el lema */
-    .motto-section {
-      background-color: white;
-      padding: 2rem;
-      border-radius: 10px;
-      margin-top: 3rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border-left: 5px solid #3498db;
-    }
-    
-    .motto-text {
-      font-size: 1.3rem;
-      font-style: italic;
-      color: #2c3e50;
-    }
-    
-    /* Efectos especiales */
-    .highlight {
-      position: relative;
-      z-index: 1;
-    }
-    
-    .highlight::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 10%;
-      background-color: rgba(52, 152, 219, 0.2);
-      z-index: -1;
-      transition: all 0.3s ease;
-    }
-    
-    .highlight:hover::before {
-      height: 100%;
-    }
-  </style>
 </head>
-<body>
+<body class="nosotros-page ">
 
+  <!-- Header -->
   <nav class="navbar navbar-expand-lg bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="/img/LOGO.png" alt="logo" class="logo" />
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/LOGO.png" alt="logo" class="logo w-auto ms-3" />
+        <!-- CAMBIO -->
       </a>
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white" href="/index.html">Inicio</a>
+            <a class="nav-link active text-white" href="/index.html"
+              >Inicio</a
+            >
           </li>
-  
+
           <li class="nav-item">
             <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
           </li>
-  
+
           <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
           <li class="nav-item">
-            <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person"></i> <span id="usernameDisplay">Invitado</span>
+            <a
+              class="nav-link text-white"
+              href="#"
+              id="userDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-person"></i>
+              <span id="usernameDisplay">Invitado</span>
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="userDropdown"
+            >
               <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
-              <li><a class="dropdown-item" href="login.html" id="loginLink">Iniciar sesión</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="login.html" id="loginLink"
+                  >Iniciar sesión</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
               <!-- Solo mostrar "Cerrar sesión" si hay un usuario logueado -->
-              <li><a class="dropdown-item" href="#" onclick="cerrarSesion()" id="cerrarSesionLink" style="display: none;">Cerrar sesión</a></li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  onclick="cerrarSesion()"
+                  id="cerrarSesionLink"
+                  style="display: none"
+                  >Cerrar sesión</a
+                >
+              </li>
             </ul>
           </li>
-  
+
           <li class="nav-item">
-            <a class="nav-link text-white" href="#"><i class="bi bi-cart"></i></a>
+            <a class="nav-link text-white" href="#" data-bs-toggle="offcanvas" data-bs-target="#carrito">
+              <i class="bi bi-cart"></i>
+            </a>
           </li>
         </ul>
       </div>
@@ -188,26 +92,27 @@
   </nav>
 
 <!-- Carrito lateral desde la derecha -->
-<div id="carrito" class="carrito-lateral bg-dark text-white p-4 shadow">
-<div class="d-flex justify-content-between align-items-center mb-3">
-  <h4 class="mb-0">🛒 Tu carrito</h4>
-  <button id="cerrar-carrito" class="btn btn-close p-0 m-0 text-white">
-    <i class="bi bi-x" style="font-size: 1.5rem;"></i>
-  </button>
+<div id="carrito" class="offcanvas offcanvas-end bg-dark text-white shadow-lg">
+  <div class="offcanvas-header d-flex justify-content-between align-items-center mb-3">
+    <h4 class="mb-0">🛒 Tu carrito</h4>
+    <button id="cerrar-carrito" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Contenido del carrito -->
+    <div id="carrito-contenido" class="mt-4">
+      <!-- Curso agregado dinámicamente -->
+    </div>
+    <hr class="border border-secondary opacity-25" />
+    <div class="d-flex justify-content-between fw-bold">
+      <span>Total:</span>
+      <span id="carrito-total">S/0.00</span>
+    </div>
+    <!-- Botón "Continuar compra" -->
+    <div class="text-end mt-3">
+      <a href="/pago.html" class="btn btn-success rounded-pill w-100">Continuar compra</a>
+    </div>
+  </div>
 </div>
-<div id="carrito-contenido" class="mt-4">
-  <!-- Curso agregado dinámicamente -->
-</div>
-<hr />
-<div class="d-flex justify-content-between fw-bold">
-  <span>Total:</span>
-  <span id="carrito-total">S/0.00</span>
-</div>
-</div>
-
-<!-- Fondo oscuro -->
-<div id="carrito-overlay" class="carrito-overlay"></div>
-
 
   <!-- Hero Section -->
   <div class="hero-section text-center">
@@ -461,7 +366,7 @@
         </div>
 
         <!-- Lema -->
-        <div class="motto-section text-center mt-5">
+        <div class="motto-section text-center mt-5 mb-4">
           <h3 class="text-muted mb-3">Nuestro Lema</h3>
           <p class="motto-text highlight">"De código nuevo a senior developer: Aprende, practica y crece con nosotros."</p>
         </div>

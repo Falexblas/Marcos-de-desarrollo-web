@@ -1,0 +1,123 @@
+
+ .hero-section {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .hero-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para el acordeón */
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .accordion-button {
+    font-weight: 500;
+    padding: 1.2rem 1.25rem;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+  }
+  
+  .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+  
+  .accordion-item:hover {
+    transform: translateY(-3px);
+  }
+  
+  .accordion-body {
+    padding: 1.5rem;
+  }
+  
+  /* Estilos para las cards internas */
+  .feature-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .feature-card .card-body {
+    padding: 1.8rem;
+  }
+  
+  .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .text-primary {
+    color: #3498db !important;
+  }
+  
+  /* Estilos para el lema */
+  .motto-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-left: 5px solid #3498db;
+  }
+  
+  .motto-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #2c3e50;
+  }
+  
+  /* Efectos especiales */
+  .highlight {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .highlight::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(52, 152, 219, 0.2);
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .highlight:hover::before {
+    height: 100%;
+  }

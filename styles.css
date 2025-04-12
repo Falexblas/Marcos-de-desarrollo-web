@@ -1,207 +1,253 @@
+/* Estilos generales para la página de cursos */
+body.cursos-page {
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
+  color: #f1f5f9;
+}
+
 body{
-    padding-top: 50px; /* Ajusta este valor según la altura del navbar */
-    background-color: rgb(244, 245, 247);
+  margin-top: 5rem;
 }
-
-.logo{
-    width: 50px;
-    margin-left: 1rem;
-}
-
-/* Estilos para los indicadores */
-.carousel-indicators button {
-    
-    border-radius: 2px; /* Bordes redondeados */
-    margin: 0.5px; /* Espaciado */
-    opacity: 0.5; /* Transparencia */
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .carousel-indicators .active {
-    opacity: 1; /* Indicador activo resaltado */
-  }
-  
-
-  .icon-fire {
-    font-size: 2rem;
-    color: #e76429;
-    margin-left: 1rem;
-  }
-
-/* Estilos para los íconos sociales */
-.social-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    aspect-ratio: 1; /* Mantiene la forma circular */
-    border-radius: 50%;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  
-
-  .card {
-    height: 100%;
-  }
-  
-  .populares{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-text {
+.card-text {
     flex-grow: 1; /* Empuja el botón hacia abajo */
   }
   
-  .card-body .btn {
-    align-self: center; /* o center si prefieres centrarlo */
-    margin-top: auto;       /* lo empuja hacia abajo sin estirarse */
+  .carousel-item {
+    min-height: 350px;
   }
   
-   /* Estilo del carrito lateral */
-   .carrito-lateral {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 350px; /* Ancho predeterminado */
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2); /* Sombra para separar del contenido principal */
-    transition: right 0.3s ease;
-    z-index: 1050;
-    overflow-y: auto;
-    padding: 20px;
-    color: #fff; /* Texto blanco */
+  .carousel-item h2 {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-item p {
+    font-size: 0.95rem;
+  }
+  
+  .carousel-item button {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-item h2 {
+      font-size: 1.3rem;
+    }
+    .carousel-item p {
+      font-size: 0.95rem;
+    }
+    .carousel-item button {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.8rem;
+    }
+    .carousel-item img {
+      max-height: 230px;
+      object-fit: contain;
+    }
+  }
+  @media (max-width: 576px) {
+    .carousel-item {
+      min-height: auto;
+    }
+    .carousel-item img {
+      max-height: 180px;
+      object-fit: contain;
+    }
+  }
+  @media (max-width: 430px) {
+    .carousel-item h2 {
+      font-size: 1.2rem;
+    }
+    .carousel-item p {
+      font-size: 0.9rem;
+    }
+    .carousel-item button {
+      font-size: 0.85rem;
+      padding: 0.3rem 0.7rem;
+    }
+    .carousel-item img {
+      max-height: 150px;
+      object-fit: contain;
+    }
+    .carousel-item {
+      height: 470px;
+      max-height: 500px;
+    }
+  }
+  
+  @media (max-width: 280px) {
+    .carousel-item h2 {
+      font-size: 1.1rem;
+    }
+    .carousel-item p {
+      font-size: 0.75rem;
+    }
+    .carousel-item button {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.5rem;
+    }
+    .carousel-item {
+      height: 450px;
+      max-height: 550px;
+    }
   }
 
-.carrito-lateral.activo {
-  right: 0;
-}
-
-/* Estilo del overlay (fondo oscuro con desenfoque) */
-.carrito-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-  backdrop-filter: blur(5px); /* Efecto de desenfoque */
-  z-index: 1049;
-  display: none;
-}
-
-.carrito-overlay.activo {
-  display: block;
-}
-
-/* Estilo de los elementos del carrito */
+ /* Estilo de los elementos del carrito */
 .carrito-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Usa flexbox para una disposición flexible */
+  align-items: center; /* Alinea verticalmente los elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
   margin-bottom: 1rem;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para cada ítem */
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  border-radius: 8px; /* Bordes redondeados */
+  transition: transform 0.2s ease; /* Efecto hover suave */
 }
 
 .carrito-item:hover {
-  transform: scale(1.02); /* Efecto hover para destacar el ítem */
+  transform: scale(1.02); /* Amplía ligeramente el elemento al pasar el ratón */
 }
 
 .carrito-item img {
-  width: 100px;
-  height: 60px;
+  width: 100px; /* Ancho fijo para las imágenes */
+  height: 60px; /* Altura fija para las imágenes */
   object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
-  border-radius: 8px;
-  margin-right: 10px;
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  flex-shrink: 0; /* Evita que la imagen se reduzca en pantallas pequeñas */
 }
 
 .carrito-item-info {
-  flex: 1;
+  flex: 1; /* Hace que el contenedor de información ocupe el espacio restante */
+  display: flex; /* Usa flexbox para organizar el contenido */
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: center; /* Centra verticalmente el contenido */
+  overflow: hidden; /* Maneja el desbordamiento de texto largo */
 }
 
 .carrito-item-info p {
-  margin: 0;
-  font-size: 14px;
+  margin: 0; /* Elimina márgenes innecesarios */
+  font-size: 14px; /* Tamaño de fuente consistente */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; /* Oculta el texto que excede el ancho */
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para texto largo */
 }
 
 .carrito-item-info p:first-child {
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-weight: bold; /* Nombre del curso en negrita */
+  margin-bottom: 5px; /* Espaciado entre el nombre y el precio */
 }
 
-.carrito-item i {
+/* Icono de eliminar */
+.carrito-item i.bi-trash-fill {
   cursor: pointer;
   color: red;
   font-size: 18px;
+  margin-left: auto; /* Alinea el icono a la derecha */
   transition: color 0.2s ease;
 }
 
-.carrito-item i:hover {
-  color: darkred; /* Cambio de color al pasar el ratón */
+.carrito-item i.bi-trash-fill:hover {
+  color: darkred;
 }
 
 /* Estilo del total */
 #carrito-total {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: right;
-  margin-top: 20px;
+  font-size: 18px; /* Tamaño de fuente para el total */
+  font-weight: bold; /* Negrita para destacar el total */
+  text-align: right; /* Alineación a la derecha */
+  margin-top: 10px; /* Espaciado superior */
 }
 
 /* Separador */
 hr {
-  border: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 20px 0;
+  border: 0; /* Sin borde predeterminado */
+  height: 1px; /* Altura del separador */
+  background: rgba(255, 255, 255, 0.2); /* Color semi-transparente */
+  margin: 20px 0; /* Espaciado alrededor del separador */
 }
 
-/* Botón de cerrar */
-#cerrar-carrito {
-  font-size: 24px; /* Tamaño del ícono */
-  color: #fff; /* Color blanco */
-  background: none; /* Sin fondo */
-  border: none; /* Sin borde */
-  cursor: pointer; /* Indicador de clic */
-  transition: transform 0.2s ease; /* Animación al pasar el ratón */
-  padding: 0; /* Eliminar padding predeterminado */
+/* Estilos específicos para las tarjetas en cursos.html */
+.curso-card {
+  border: none; /* Eliminar el borde predeterminado */
+  background-color: #0f172a; /* Fondo oscuro consistente */
+  color: #f1f5f9; /* Texto claro para visibilidad */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover suave */
 }
 
-#cerrar-carrito:hover {
-  transform: scale(1.2); /* Agrandar el ícono al pasar el ratón */
+/* Efecto al pasar el mouse sobre la tarjeta */
+.curso-card:hover {
+  transform: translateY(-5px); /* Levantar la tarjeta ligeramente */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
 }
 
-/* Estilo del botón "Continuar compra" */
-.btn-success {
-  border-radius: 8px; /* Bordes redondeados */
-  transition: transform 0.2s ease; /* Animación al pasar el ratón */
+/* Estilo para la imagen del curso */
+.curso-card .card-img-top {
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  height: 250px; /* Altura fija para todas las imágenes */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
 }
 
-.btn-success:hover {
-  transform: scale(1.05); /* Agrandar ligeramente al pasar el ratón */
+/* Estilo para el cuerpo de la tarjeta */
+.curso-card .card-body {
+  padding: 1rem; /* Espaciado interno */
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en columna */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  height: 100%; /* Asegura que el cuerpo ocupe todo el espacio disponible */
 }
 
-/* Reducir el ancho del carrito en pantallas pequeñas */
-@media (max-width: 480px) {
-  .carrito-lateral {
-    width: 250px; /* Ancho reducido para pantallas pequeñas */
-  }
+/* Estilo para el título del curso */
+.curso-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #f1f5f9; /* Color blanco para destacar el título */
+}
+
+/* Estilo para la descripción del curso */
+.curso-card .card-text {
+  font-size: 0.9rem;
+  color: #ccc; /* Texto gris claro */
+  margin-bottom: 0.5rem; /* Espacio moderado antes de los botones */
+}
+
+/* Estilo para el precio del curso */
+.curso-card .card-price {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #e76429; /* Color destacado para el precio */
+  margin-right: 1rem; /* Espacio entre el precio y los botones */
+}
+
+/* Estilo para el botón "Ver más" */
+.curso-card .btn-primary {
+  background-color: #0d6efd; /* Azul personalizado */
+  border: none;
+  padding: 0.5rem 1rem; /* Espaciado interno ajustado */
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease; /* Efecto hover suave */
+}
+
+.curso-card .btn-primary:hover {
+  background-color: #0b5ed7; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Estilo para el botón "Comprar" */
+.curso-card .btn-success {
+  background-color: #198754; /* Verde personalizado */
+  border: none;
+  padding: 0.5rem 1rem; /* Espaciado interno ajustado */
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease; /* Efecto hover suave */
+}
+
+.curso-card .btn-success:hover {
+  background-color: #157347; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilo para el contenedor de botones (flexbox) */
+.curso-card .botones {
+  display: flex;
+  justify-content: space-between; /* Distribuye los botones y el precio */
+  align-items: center; /* Alinea verticalmente los elementos */
 }

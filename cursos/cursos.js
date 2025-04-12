@@ -523,18 +523,20 @@ if (curso) {
 const btnAgregar = document.getElementById('btnAgregarCarrito');
 const carritoIcono = document.querySelector('.bi-cart').closest('a');
 const carrito = document.getElementById('carrito');
-const overlay = document.getElementById('carrito-overlay');
 const contenido = document.getElementById('carrito-contenido');
 const total = document.getElementById('carrito-total');
+
+// Inicializar el Offcanvas de Bootstrap
+const offcanvas = new bootstrap.Offcanvas(carrito);
 
 // Cargar el carrito desde localStorage al iniciar
 let carritoCursos = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Función para obtener los datos del curso desde el HTML dinámicamente
 function obtenerDatosCursoDesdeHTML() {
-  const nombre = document.getElementById('curso-nombre')?.textContent.trim();
-  const imagen = document.getElementById('curso-imagen')?.getAttribute('src');
-  
+  const nombre = document.querySelector('h1')?.textContent.trim();
+  const imagen = document.querySelector('.imagen-curso img')?.getAttribute('src');
+
   // Extraer el precio con descuento (el último precio en el texto del botón)
   const precioTexto = document.getElementById('btnAgregarCarrito')?.textContent;
   const precios = precioTexto?.matchAll(/S\/(\d+)/g); // Encuentra todos los precios
@@ -546,24 +548,23 @@ function obtenerDatosCursoDesdeHTML() {
 
 // Mostrar carrito
 function mostrarCarrito() {
-  // Generar el HTML para todos los cursos en el carrito
-  contenido.innerHTML = carritoCursos.map((curso, index) => generarHTMLCurso(curso, index)).join('');
-  actualizarTotal(); // Actualizar el total del carrito
-  carrito.classList.add('activo'); // Mostrar el carrito
-  overlay.classList.add('activo'); // Mostrar el fondo oscuro
-}
+  if (carritoCursos.length === 0) {
+    contenido.innerHTML = '<p class="text-center">Tu carrito está vacío.</p>';
+    total.textContent = 'S/0.00 PEN';
+    offcanvas.show();
+    return;
+  }
 
-// Cerrar carrito
-overlay.addEventListener('click', () => {
-  carrito.classList.remove('activo'); // Ocultar el carrito
-  overlay.classList.remove('activo'); // Ocultar el fondo oscuro
-});
+  contenido.innerHTML = carritoCursos.map((curso, index) => generarHTMLCurso(curso, index)).join('');
+  actualizarTotal();
+  offcanvas.show();
+}
 
 // Abrir carrito desde el ícono del navbar
 if (carritoIcono) {
   carritoIcono.addEventListener('click', (e) => {
     e.preventDefault();
-    mostrarCarrito(); // Mostrar el carrito
+    mostrarCarrito();
   });
 }
 
@@ -587,12 +588,14 @@ if (btnAgregar) {
 function generarHTMLCurso(curso, index) {
   return `
     <div class="carrito-item">
-      <img src="${curso.imagen}" alt="${curso.nombre}" />
-      <div class="carrito-item-info">
-        <p class="mb-1 fw-bold">${curso.nombre}</p>
-        <p class="text-success">S/${curso.precioOferta.toFixed(2)} PEN</p>
+      <div class="d-flex align-items-center">
+        <img src="${curso.imagen}" alt="${curso.nombre}" class="img-fluid rounded me-3" style="width: 100px; height: 60px;" />
+        <div class="carrito-item-info">
+          <p class="mb-1 fw-bold">${curso.nombre}</p>
+          <p class="text-success">S/${curso.precioOferta.toFixed(2)} PEN</p>
+        </div>
       </div>
-      <i class="bi bi-trash-fill" onclick="eliminarDelCarrito(${index})"></i>
+      <i class="bi bi-trash-fill text-danger fs-5" onclick="eliminarDelCarrito(${index})"></i>
     </div>
   `;
 }
@@ -608,13 +611,4 @@ function eliminarDelCarrito(index) {
 function actualizarTotal() {
   const totalValor = carritoCursos.reduce((acc, curso) => acc + curso.precioOferta, 0);
   total.textContent = `S/${totalValor.toFixed(2)} PEN`;
-}
-
-// Cerrar carrito al hacer clic en el botón de cierre
-const cerrarCarritoBtn = document.getElementById('cerrar-carrito');
-if (cerrarCarritoBtn) {
-  cerrarCarritoBtn.addEventListener('click', () => {
-    carrito.classList.remove('activo'); // Ocultar el carrito
-    overlay.classList.remove('activo'); // Ocultar el fondo oscuro
-  });
 }

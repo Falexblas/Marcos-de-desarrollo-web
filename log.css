@@ -1,139 +1,33 @@
-   body {
-    padding-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #111827;
-    margin: 0;
-  }
-  
-  .form-container {
-    min-height: 400px;
-    width: 320px;
-    border-radius: 0.75rem;
-    background-color: rgba(17, 24, 39, 1);
-    padding: 2rem;
-    color: rgba(243, 244, 246, 1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-  }
-  
-  .form {
-    margin-top: 1.5rem;
-  }
-  
-  .input-group {
-    margin-top: 0.25rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  
-  .input-group label {
-    display: block;
-    color: rgba(156, 163, 175, 1);
-    margin-bottom: 4px;
-  }
-  
-  .input-group input {
-    width: 90%;
-    border-radius: 0.375rem;
-    border: 1px solid rgba(55, 65, 81, 1);
-    outline: 0;
-    background-color: rgba(17, 24, 39, 1);
-    padding: 0.75rem 1rem;
-    color: rgba(243, 244, 246, 1);
-  }
-  
-  .input-group input:focus {
-    border-color: rgba(167, 139, 250);
-  }
-  
-  .forgot {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: rgba(156, 163, 175,1);
-    margin: 8px 0 14px 0;
-  }
-  
-  .forgot a, .signup a {
-    color: rgba(243, 244, 246, 1);
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .forgot a:hover, .signup a:hover {
-    text-decoration: underline rgba(167, 139, 250, 1);
-  }
-  
-  button.sign {
-    display: block;
-    width: 100%;
-    background-color: rgb(107, 0, 168);
-    padding: 0.75rem;
-    text-align: center;
-    color: rgba(17, 24, 39, 1);
-    border: none;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    color: white;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-    margin-top: 1rem; /* o prueba con 16px, 20px, lo que veas que queda mejor */
-
-  }
-  
-  button.sign:hover {
-    background-color: rgb(89, 0, 140);
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  .social-icons .icon {
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 12px;
-    margin: 0 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .social-icons .icon:hover {
-    transform: scale(1.1);
-    background-color: #e0e0e0;
-  }
-  
-  .signup {
-    text-align: center;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: rgba(156, 163, 175, 1);
-  }
-  
-  @media (max-width: 576px) {
-    .form-container {
-      width: 90%;
-      padding: 1.5rem;
-    }
-  }
-
-  .logo{
-    width: 50px;
-    margin-left: 1rem;
+body {
+  background-color: #111827;
+  min-height: 100vh;
+  color: #f3f4f6; /* Color de texto principal */
 }
-  
- 
+
+.form-container {
+  background-color: rgba(31, 41, 55, 0.9); 
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.2); 
+  border: 1px solid rgba(167, 139, 250, 0.1); 
+  color: #f3f4f6;
+}
+
+.input-group label {
+  color: rgba(156, 163, 175, 1);
+}
+
+
+.social-btn {
+  padding: 10px 12px;
+  transition: all 0.3s ease;
+  background-color: rgba(31, 41, 55, 0.7);
+  width: 3rem;
+  border: 1px solid rgba(55, 65, 81, 1);
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  background-color: rgb(45, 56, 77);
+}
+
+
+
