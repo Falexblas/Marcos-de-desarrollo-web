@@ -30,4 +30,18 @@ body {
 }
 
 
+.bg-gray-700 {
+  background-color: #374151 !important;
+}
+
+
+.border-gray-600 {
+  border-color: #4b5563 !important;
+}
+
+
+.text-white {
+  color: #ffffff !important;
+}
+
 

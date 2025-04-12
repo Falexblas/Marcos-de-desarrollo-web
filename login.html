@@ -32,8 +32,8 @@
       <h2 class="text-center mb-4 text-white">Login</h2>
       <form id="loginForm">
         <div class="mb-3">
-          <label for="username" class="form-label text-gray-400">Nombre</label>
-          <input type="text" class="form-control bg-gray-700 border-gray-600 text-white" id="username" placeholder="Nombre de usuario" required>
+          <label for="loginEmail" class="form-label text-gray-400">Correo</label>
+          <input type="email" class="form-control bg-gray-700 border-gray-600 text-white" id="loginEmail" placeholder="ejemplo@correo.com" required>          
         </div>
         <div class="mb-3">
           <label for="password" class="form-label text-gray-400">Contraseña</label>
@@ -88,6 +88,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
     // Mostrar formulario de registro
     document.getElementById("showRegisterForm").addEventListener("click", function (event) {
@@ -95,59 +96,60 @@
       document.getElementById("loginFormContainer").style.display = "none";
       document.getElementById("registerFormContainer").style.display = "block";
     });
-
+  
     // Mostrar formulario de login
     document.getElementById("showLoginForm").addEventListener("click", function (event) {
       event.preventDefault();
       document.getElementById("loginFormContainer").style.display = "block";
       document.getElementById("registerFormContainer").style.display = "none";
     });
-
+  
     // REGISTRO
     document.getElementById("registerForm").addEventListener("submit", function (event) {
       event.preventDefault();
-
+  
       const name = event.target.name.value.trim();
       const email = event.target.email.value.trim();
       const password = event.target.password.value.trim();
-
+  
       // Validación simple
       if (!name || !email || !password) {
         alert("Por favor, rellene todos los campos.");
         return;
       }
-
+  
       const usuario = { name, email, password };
       localStorage.setItem("usuarioRegistrado", JSON.stringify(usuario));
-
+  
       alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
       event.target.reset();
       document.getElementById("loginFormContainer").style.display = "block";
       document.getElementById("registerFormContainer").style.display = "none";
     });
-
-    // LOGIN
+  
+    // LOGIN usando correo en vez de nombre
     document.getElementById("loginForm").addEventListener("submit", function (event) {
       event.preventDefault();
-
-      const username = event.target.username.value.trim();
+  
+      const email = event.target.loginEmail.value.trim();
       const password = event.target.password.value.trim();
-
+  
       // Validación
-      if (!username || !password) {
+      if (!email || !password) {
         alert("Por favor, rellene todos los campos.");
         return;
       }
-
+  
       const usuarioGuardado = JSON.parse(localStorage.getItem("usuarioRegistrado"));
-
-      if (usuarioGuardado && usuarioGuardado.name === username && usuarioGuardado.password === password) {
+  
+      if (usuarioGuardado && usuarioGuardado.email === email && usuarioGuardado.password === password) {
         alert("¡Inicio de sesión exitoso!");
         window.location.href = "index.html"; // Redirección al index
       } else {
-        alert("Nombre de usuario o contraseña incorrectos.");
+        alert("Correo o contraseña incorrectos.");
       }
     });
   </script>
+  
 </body>
 </html>
