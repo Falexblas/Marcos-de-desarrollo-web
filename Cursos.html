@@ -123,7 +123,9 @@
         </div>
         <!-- Botón "Continuar compra" -->
         <div class="text-end mt-3">
-          <a href="/pago.html" class="btn btn-success rounded-pill w-100"
+          <a
+            href="/pago.html"
+            class="btn btn-success rounded-pill w-100"
             >Continuar compra</a
           >
         </div>
@@ -150,7 +152,11 @@
         <!-- Curso 1 -->
         <div class="col curso">
           <div class="card curso-card h-100">
-            <img src="img/curso-java.jpg" class="card-img-top" alt="Curso de Java" />
+            <img
+              src="img/curso-java.jpg"
+              class="card-img-top"
+              alt="Curso de Java"
+            />
             <div class="card-body">
               <h5 class="card-title">Curso de Java</h5>
               <p class="card-text">
@@ -163,7 +169,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/30.00 PEN</span>
-                <button id="btnAgregarCarrito"  class="btn btn-success">Comprar</button>
+                <button
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de Java"
+                  data-imagen="/img/curso-java.jpg"
+                  data-precio="30"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -189,7 +202,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/15.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de Python"
+                  data-imagen="/img/python-curso-gratis.jpg"
+                  data-precio="15"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -215,7 +235,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/25.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de JavaScript"
+                  data-imagen="/img/curso-js.jpg"
+                  data-precio="25"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -241,7 +268,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/20.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de CSS"
+                  data-imagen="/img/curso-css.jpg"
+                  data-precio="20"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -265,7 +299,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/10.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de HTML"
+                  data-imagen="/img/curso-html.jpg"
+                  data-precio="10"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -289,7 +330,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/25.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de React JS"
+                  data-imagen="/img/curso-react.jpg"
+                  data-precio="25"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -313,7 +361,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/20.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                class="btn btn-success comprar-curso"
+                data-nombre="Curso de TypeScript"
+                data-imagen="/img/curso-typescript.png"
+                data-precio="20"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </div>
@@ -337,7 +392,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/10.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                class="btn btn-success comprar-curso"
+                data-nombre="Curso de Git y GitHub"
+                data-imagen="/img/curso-git-github.jpg"
+                data-precio="10"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </div>
@@ -356,12 +418,19 @@
               <p class="card-text">Aprende Angular FW desde cero.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
-                  href="/cursos/detalle-curso.html?id=9"
+                  href="/cursos/detalle-curso.html?id=3"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
                 <span class="card-price">S/30.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                class="btn btn-success comprar-curso"
+                data-nombre="Curso de Angular FW"
+                data-imagen="/img/curso-angular.jpeg"
+                data-precio="30"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </div>
@@ -385,7 +454,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/35.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                class="btn btn-success comprar-curso"
+                data-nombre="Curso de Spring Boot"
+                data-imagen="/img/curso-springboot.webp"
+                data-precio="35"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </div>
@@ -395,7 +471,7 @@
         <div class="col curso">
           <div class="card curso-card h-100">
             <img
-              src="img/curso-php.png"
+              src="/img/curso-php.png"
               class="card-img-top"
               alt="Curso de PHP"
             />
@@ -409,7 +485,14 @@
                   >Ver más</a
                 >
                 <span class="card-price">S/20.00 PEN</span>
-                <button class="btn btn-success">Comprar</button>
+                <button
+                class="btn btn-success comprar-curso"
+                data-nombre="Curso de PHP"
+                data-imagen="/img/curso-php.png"
+                data-precio="20"
+              >
+                Comprar
+              </button>
               </div>
             </div>
           </div>
@@ -511,6 +594,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="cursos/cursos.js"></script>
     <script>
       // Buscador Script
@@ -552,5 +636,56 @@
         window.location.href = "login.html";
       }
     </script>
+    <script>
+      // Manejar clic en los botones "Comprar" (en cursos.html)
+      document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("comprar-curso")) {
+          const boton = event.target;
+          const nombre = boton.getAttribute("data-nombre");
+          const imagen = boton.getAttribute("data-imagen");
+          const precio = parseFloat(boton.getAttribute("data-precio"));
+
+          // Evitar duplicados
+          const yaExiste = carritoCursos.some(
+            (curso) => curso.nombre === nombre
+          );
+          if (!yaExiste) {
+            carritoCursos.push({ nombre, imagen, precioOferta: precio });
+            localStorage.setItem("carrito", JSON.stringify(carritoCursos));
+          }
+
+          // Actualizar la vista del carrito
+          mostrarCarrito();
+
+          // Abrir automáticamente el Offcanvas del carrito
+          offcanvas.show();
+        }
+      });
+    </script>
+    <script>
+      // Obtener el botón "Continuar compra"
+      const btnContinuarCompra = document.querySelector('a[href="/pago.html"]');
+    
+      btnContinuarCompra.addEventListener("click", function (e) {
+        // Obtener el carrito desde localStorage
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    
+        // Si el carrito está vacío, prevenimos la navegación y mostramos alerta
+        if (carrito.length === 0) {
+          e.preventDefault();
+    
+          Swal.fire({
+            icon: "warning",
+            title: "Tu carrito está vacío",
+            text: "Agrega al menos un curso antes de continuar con la compra.",
+            confirmButtonText: "OK",
+            confirmButtonColor: "#3085d6",
+          });
+        }
+      });
+    </script>
+    
+    
+    
   </body>
 </html>

@@ -85,7 +85,7 @@ const cursos = [
     duracion: "8 horas",
     nivel: "Intermedio",
     precio: "S/25 PEN",
-    imagen: "../img/curso-js.jpg",
+    imagen: "/img/curso-js.jpg",
     temario: [
       {
         titulo: "1. Fundamentos de JavaScript",
@@ -126,7 +126,7 @@ const cursos = [
     duracion: "6 horas",
     nivel: "Básico",
     precio: "S/20 PEN",
-    imagen: "../img/curso-css.jpg",
+    imagen: "/img/curso-css.jpg",
     temario: [
       {
         titulo: "1. Fundamentos de CSS",
@@ -249,7 +249,7 @@ const cursos = [
     duracion: "6 horas",
     nivel: "Intermedio",
     precio: "S/20 PEN",
-    imagen: "../img/curso-typescript.png",
+    imagen: "/img/curso-typescript.png",
     temario: [
       {
         titulo: "1. Fundamentos de TypeScript",
@@ -320,7 +320,7 @@ const cursos = [
   },
   {
     id: 9,
-    nombre: "Curso de Angular FW",
+    nombre: "Curso de Angular",
     descripcion: "Domina Angular Framework para construir aplicaciones web robustas y escalables.",
     aprendizajes: [
       "Comprenderás los conceptos básicos de Angular y su arquitectura.",
@@ -461,7 +461,7 @@ if (curso) {
     document.title = `Curso: ${curso.nombre}`;
 
     // Encabezado
-    document.querySelector('h1').textContent = `Curso: ${curso.nombre}`;
+    document.querySelector('h1').textContent = ` ${curso.nombre}`;
     document.querySelector('.descripcion').textContent = curso.descripcion;
 
     // Aprendizajes
@@ -611,4 +611,33 @@ function eliminarDelCarrito(index) {
 function actualizarTotal() {
   const totalValor = carritoCursos.reduce((acc, curso) => acc + curso.precioOferta, 0);
   total.textContent = `S/${totalValor.toFixed(2)} PEN`;
+}
+
+// Importar SweetAlert2 desde CDN
+const Swal = window.Swal;
+
+// Elemento del botón "Continuar compra"
+const continuarCompraBtn = document.getElementById('continuarCompraBtn');
+
+// Cargar el carrito desde localStorage
+
+
+// Agregar evento al botón "Continuar compra"
+if (continuarCompraBtn) {
+  continuarCompraBtn.addEventListener('click', (e) => {
+    // Prevenir la redirección predeterminada
+    e.preventDefault();
+
+    // Verificar si el carrito está vacío
+    if (carritoCursos.length === 0) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Carrito vacío',
+        text: 'No puedes continuar porque tu carrito está vacío. Agrega cursos para proceder al pago.',
+      });
+    } else {
+      // Redirigir al usuario a la página de pago
+      window.location.href = '/pago.html';
+    }
+  });
 }
