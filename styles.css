@@ -166,88 +166,22 @@ hr {
   margin: 20px 0; /* Espaciado alrededor del separador */
 }
 
-/* Estilos específicos para las tarjetas en cursos.html */
-.curso-card {
-  border: none; /* Eliminar el borde predeterminado */
-  background-color: #0f172a; /* Fondo oscuro consistente */
-  color: #f1f5f9; /* Texto claro para visibilidad */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover suave */
+/* Estilo personalizado para los cards */
+.custom-card {
+  background-color: #0f172a; /* Fondo oscuro */
+  border: none; /* Sin borde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
-/* Efecto al pasar el mouse sobre la tarjeta */
-.curso-card:hover {
-  transform: translateY(-5px); /* Levantar la tarjeta ligeramente */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+.custom-card:hover {
+  transform: translateY(-10px); /* Levantar ligeramente el card */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
 }
 
-/* Estilo para la imagen del curso */
-.curso-card .card-img-top {
-  object-fit: cover; /* Ajusta la imagen al contenedor */
-  height: 250px; /* Altura fija para todas las imágenes */
-  border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+/* Asegurar que el texto dentro del card sea legible */
+.custom-card .card-title,
+.custom-card .card-text,
+.custom-card .card-price {
+  color: white; /* Texto blanco para contraste */
 }
 
-/* Estilo para el cuerpo de la tarjeta */
-.curso-card .card-body {
-  padding: 1rem; /* Espaciado interno */
-  display: flex;
-  flex-direction: column; /* Coloca los elementos en columna */
-  justify-content: space-between; /* Distribuye el espacio entre los elementos */
-  height: 100%; /* Asegura que el cuerpo ocupe todo el espacio disponible */
-}
-
-/* Estilo para el título del curso */
-.curso-card .card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #f1f5f9; /* Color blanco para destacar el título */
-}
-
-/* Estilo para la descripción del curso */
-.curso-card .card-text {
-  font-size: 0.9rem;
-  color: #ccc; /* Texto gris claro */
-  margin-bottom: 0.5rem; /* Espacio moderado antes de los botones */
-}
-
-/* Estilo para el precio del curso */
-.curso-card .card-price {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #e76429; /* Color destacado para el precio */
-  margin-right: 1rem; /* Espacio entre el precio y los botones */
-}
-
-/* Estilo para el botón "Ver más" */
-.curso-card .btn-primary {
-  background-color: #0d6efd; /* Azul personalizado */
-  border: none;
-  padding: 0.5rem 1rem; /* Espaciado interno ajustado */
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease; /* Efecto hover suave */
-}
-
-.curso-card .btn-primary:hover {
-  background-color: #0b5ed7; /* Azul más oscuro al pasar el mouse */
-}
-
-/* Estilo para el botón "Comprar" */
-.curso-card .btn-success {
-  background-color: #198754; /* Verde personalizado */
-  border: none;
-  padding: 0.5rem 1rem; /* Espaciado interno ajustado */
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease; /* Efecto hover suave */
-}
-
-.curso-card .btn-success:hover {
-  background-color: #157347; /* Verde más oscuro al pasar el mouse */
-}
-
-/* Estilo para el contenedor de botones (flexbox) */
-.curso-card .botones {
-  display: flex;
-  justify-content: space-between; /* Distribuye los botones y el precio */
-  align-items: center; /* Alinea verticalmente los elementos */
-}

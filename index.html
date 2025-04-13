@@ -21,25 +21,19 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container-fluid">
+
         <a class="navbar-brand" href="index.html">
           <img src="/img/LOGO.png" alt="logo" class="logo w-auto ms-3" />
-          <!-- CAMBIO -->
         </a>
-        <button
-          class="navbar-toggler bg-light"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-        >
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-white" href="/index.html"
-                >Inicio</a
-              >
+              <a class="nav-link text-info" href="/index.html">Inicio</a>
             </li>
 
             <li class="nav-item">
@@ -51,26 +45,16 @@
 
             <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
             <li class="nav-item">
-              <a
-                class="nav-link text-white"
-                href="#"
-                id="userDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+
+              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person"></i>
                 <span id="usernameDisplay">Invitado</span>
               </a>
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="userDropdown"
-              >
+
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                 <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
                 <li>
-                  <a class="dropdown-item" href="login.html" id="loginLink"
-                    >Iniciar sesión</a
-                  >
+                  <a class="dropdown-item" href="login.html" id="loginLink">Iniciar sesión</a>
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <!-- Solo mostrar "Cerrar sesión" si hay un usuario logueado -->
@@ -85,6 +69,7 @@
                   >
                 </li>
               </ul>
+              
             </li>
 
             <li class="nav-item">
@@ -103,13 +88,8 @@
     </nav>
 
     <!-- Carrito lateral desde la derecha -->
-    <div
-      id="carrito"
-      class="offcanvas offcanvas-end bg-dark text-white shadow-lg"
-    >
-      <div
-        class="offcanvas-header d-flex justify-content-between align-items-center mb-3"
-      >
+    <div id="carrito" class="offcanvas offcanvas-end bg-dark text-white shadow-lg">
+      <div class="offcanvas-header d-flex justify-content-between align-items-center mb-2">
         <h4 class="mb-0">🛒 Tu carrito</h4>
         <button
           id="cerrar-carrito"
@@ -118,9 +98,9 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas-body ">
         <!-- Contenido del carrito -->
-        <div id="carrito-contenido" class="mt-4">
+        <div id="carrito-contenido" class="mt-0">
           <!-- Curso agregado dinámicamente -->
         </div>
         <hr class="border border-secondary opacity-25" />
@@ -129,13 +109,8 @@
           <span id="carrito-total">S/0.00</span>
         </div>
         <!-- Botón "Continuar compra" -->
-        <div class="text-end mt-3">
-          <a
-            href="/pago.html"
-            id="continuarCompraBtn"
-            class="btn btn-success rounded-pill w-100"
-            >Continuar compra</a
-          >
+        <div class="text-center mt-3">
+          <a href="/pago.html" id="continuarCompraBtn" class="btn btn-success  ">Continuar compra</a>
         </div>
       </div>
     </div>
@@ -214,12 +189,9 @@
 
     <div class="container">
       <div class="row mt-5">
-        <div class="col-12 text-left title-container">
+        <div class="col-12 text-start title-container">
           <h2 class="d-inline">Los Cursos Más Populares</h2>
-          <i
-            class="bi bi-fire"
-            style="font-size: 2rem; color: #e76429; margin-left: 1rem"
-          ></i>
+          <i class="bi bi-fire" style="font-size: 2rem; color: #e76429; margin-left: 1rem"></i>
         </div>
       </div>
     </div>
@@ -228,8 +200,8 @@
     <div class="container mt-3 text-center mb-5">
       <div class="row">
         <!-- Tarjeta 1 -->
-        <div class="col-md-3 mb-3">
-          <div class="card h-100">
+        <div class="col-lg-3 col-md-4 mb-3">
+          <div class="card h-100 ">
             <img
               src="img/python-curso-gratis.jpg"
               class="card-img-top"
@@ -250,8 +222,8 @@
         </div>
 
         <!-- Tarjeta 2 -->
-        <div class="col-md-3 mb-3">
-          <div class="card h-100">
+        <div class="col-lg-3 col-md-4 mb-3">
+          <div class="card h-100 ">
             <img src="img/curso-java.jpg" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column populares">
               <h5 class="card-title">Curso de Java</h5>
@@ -267,7 +239,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
             <img src="img/curso-react.jpg" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column populares">
@@ -283,7 +255,7 @@
           </div>
         </div>
 
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
             <img src="img/curso-js.jpg" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column populares">
@@ -300,7 +272,7 @@
         </div>
 
         <!-- Tarjeta 3 -->
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
             <img src="img/curso-angular.jpeg" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column populares">
@@ -317,7 +289,7 @@
         </div>
 
         <!-- Tarjeta 4 -->
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
             <img
               src="img/curso-springboot.webp"
@@ -338,7 +310,7 @@
         </div>
 
         <!-- Tarjeta 5 -->
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
             <img src="img/curso-css.jpg" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column populares">
@@ -355,7 +327,7 @@
         </div>
 
         <!-- Tarjeta 6 -->
-        <div class="col-md-3 mb-3">
+        <div class="col-lg-3 col-md-4 mb-3">
           <div class="card h-100">
             <img src="img/curso-php.png" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column populares">

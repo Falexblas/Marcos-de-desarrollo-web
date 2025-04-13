@@ -123,9 +123,7 @@
         </div>
         <!-- Botón "Continuar compra" -->
         <div class="text-end mt-3">
-          <a
-            href="/pago.html"
-            class="btn btn-success rounded-pill w-100"
+          <a href="/pago.html" class="btn btn-success rounded-pill w-100"
             >Continuar compra</a
           >
         </div>
@@ -148,19 +146,23 @@
       </div>
 
       <!-- Lista de cursos -->
-      <div class="row row-cols-1 row-cols-md-3 g-4 mb-5" id="lista-cursos">
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5"
+        id="lista-cursos"
+      >
         <!-- Curso 1 -->
-         
-        <div class="col curso"> 
-          <div class="card curso-card h-100">
+
+        <!-- Curso 1 -->
+        <div class="col curso">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-java.jpg"
               class="card-img-top"
               alt="Curso de Java"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de Java</h5>
-              <p class="card-text">
+              <h5 class="card-title text-white">Curso de Java</h5>
+              <p class="card-text text-white">
                 Aprende Java desde cero con ejemplos prácticos.
               </p>
               <div class="d-flex justify-content-between align-items-center">
@@ -169,7 +171,7 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/30.00 PEN</span>
+                <span class="card-price text-white">S/30.00 PEN</span>
                 <button
                   class="btn btn-success comprar-curso"
                   data-nombre="Curso de Java"
@@ -185,15 +187,15 @@
 
         <!-- Curso 2 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/python-curso-gratis.jpg"
               class="card-img-top"
               alt="Curso de Python"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de Python</h5>
-              <p class="card-text">
+              <h5 class="card-title text-white">Curso de Python</h5>
+              <p class="card-text text-white">
                 Aprende Python desde cero con ejemplos prácticos.
               </p>
               <div class="d-flex justify-content-between align-items-center">
@@ -202,7 +204,7 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/15.00 PEN</span>
+                <span class="card-price text-white">S/15.00 PEN</span>
                 <button
                   class="btn btn-success comprar-curso"
                   data-nombre="Curso de Python"
@@ -218,15 +220,15 @@
 
         <!-- Curso 3 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-js.jpg"
               class="card-img-top"
               alt="Curso de JavaScript"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de JavaScript</h5>
-              <p class="card-text">
+              <h5 class="card-title text-white">Curso de JavaScript</h5>
+              <p class="card-text text-white">
                 Aprende JavaScript con ejemplos interactivos.
               </p>
               <div class="d-flex justify-content-between align-items-center">
@@ -235,7 +237,7 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/25.00 PEN</span>
+                <span class="card-price text-white">S/25.00 PEN</span>
                 <button
                   class="btn btn-success comprar-curso"
                   data-nombre="Curso de JavaScript"
@@ -251,15 +253,15 @@
 
         <!-- Curso 4 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-css.jpg"
               class="card-img-top"
               alt="Curso de CSS"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de CSS</h5>
-              <p class="card-text">
+              <h5 class="card-title text-white">Curso de CSS</h5>
+              <p class="card-text text-white">
                 Aprende CSS desde cero con ejemplos prácticos.
               </p>
               <div class="d-flex justify-content-between align-items-center">
@@ -268,7 +270,7 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/20.00 PEN</span>
+                <span class="card-price text-white">S/20.00 PEN</span>
                 <button
                   class="btn btn-success comprar-curso"
                   data-nombre="Curso de CSS"
@@ -281,25 +283,26 @@
             </div>
           </div>
         </div>
-
         <!-- Curso 5 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-html.jpg"
               class="card-img-top"
               alt="Curso de HTML"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de HTML</h5>
-              <p class="card-text">Aprende a crear páginas web con HTML.</p>
+              <h5 class="card-title text-white">Curso de HTML</h5>
+              <p class="card-text text-white">
+                Aprende a crear páginas web con HTML.
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=5"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/10.00 PEN</span>
+                <span class="card-price text-white">S/10.00 PEN</span>
                 <button
                   class="btn btn-success comprar-curso"
                   data-nombre="Curso de HTML"
@@ -315,22 +318,24 @@
 
         <!-- Curso 6 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-react.jpg"
               class="card-img-top"
               alt="Curso de React"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de React JS</h5>
-              <p class="card-text">Aprende a crear páginas web con React JS.</p>
+              <h5 class="card-title text-white">Curso de React JS</h5>
+              <p class="card-text text-white">
+                Aprende a crear páginas web con React JS.
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=6"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/25.00 PEN</span>
+                <span class="card-price text-white">S/25.00 PEN</span>
                 <button
                   class="btn btn-success comprar-curso"
                   data-nombre="Curso de React JS"
@@ -346,30 +351,30 @@
 
         <!-- Curso 7 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-typescript.png"
               class="card-img-top"
               alt="Curso de TypeScript"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de TypeScript</h5>
-              <p class="card-text">Aprende TypeScript desde cero.</p>
+              <h5 class="card-title text-white">Curso de TypeScript</h5>
+              <p class="card-text text-white">Aprende TypeScript desde cero.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=7"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/20.00 PEN</span>
+                <span class="card-price text-white">S/20.00 PEN</span>
                 <button
-                class="btn btn-success comprar-curso"
-                data-nombre="Curso de TypeScript"
-                data-imagen="/img/curso-typescript.png"
-                data-precio="20"
-              >
-                Comprar
-              </button>
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de TypeScript"
+                  data-imagen="/img/curso-typescript.png"
+                  data-precio="20"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -377,30 +382,30 @@
 
         <!-- Curso 8 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-git-github.jpg"
               class="card-img-top"
               alt="Curso de Git y GitHub"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de Git y GitHub</h5>
-              <p class="card-text">Aprende a usar Git y GitHub.</p>
+              <h5 class="card-title text-white">Curso de Git y GitHub</h5>
+              <p class="card-text text-white">Aprende a usar Git y GitHub.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=8"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/10.00 PEN</span>
+                <span class="card-price text-white">S/10.00 PEN</span>
                 <button
-                class="btn btn-success comprar-curso"
-                data-nombre="Curso de Git y GitHub"
-                data-imagen="/img/curso-git-github.jpg"
-                data-precio="10"
-              >
-                Comprar
-              </button>
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de Git y GitHub"
+                  data-imagen="/img/curso-git-github.jpg"
+                  data-precio="10"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -408,30 +413,30 @@
 
         <!-- Curso 9 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
-              src="img/curso-angular.jpeg"
+              src="img/curso-angular2.jpg"
               class="card-img-top"
               alt="Curso de Angular"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de Angular FW</h5>
-              <p class="card-text">Aprende Angular FW desde cero.</p>
+              <h5 class="card-title text-white">Curso de Angular FW</h5>
+              <p class="card-text text-white">Aprende Angular FW desde cero.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=3"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/30.00 PEN</span>
+                <span class="card-price text-white">S/30.00 PEN</span>
                 <button
-                class="btn btn-success comprar-curso"
-                data-nombre="Curso de Angular FW"
-                data-imagen="/img/curso-angular.jpeg"
-                data-precio="30"
-              >
-                Comprar
-              </button>
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de Angular FW"
+                  data-imagen="/img/curso-angular.jpeg"
+                  data-precio="30"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -439,61 +444,64 @@
 
         <!-- Curso 10 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="img/curso-springboot.webp"
               class="card-img-top"
               alt="Curso de Spring Boot"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de Spring Boot</h5>
-              <p class="card-text">Aprende Spring Boot desde cero.</p>
+              <h5 class="card-title text-white">Curso de Spring Boot</h5>
+              <p class="card-text text-white">
+                Aprende Spring Boot desde cero.
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=10"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/35.00 PEN</span>
+                <span class="card-price text-white">S/35.00 PEN</span>
                 <button
-                class="btn btn-success comprar-curso"
-                data-nombre="Curso de Spring Boot"
-                data-imagen="/img/curso-springboot.webp"
-                data-precio="35"
-              >
-                Comprar
-              </button>
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de Spring Boot"
+                  data-imagen="/img/curso-springboot.webp"
+                  data-precio="35"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Curso 11 -->
+        <!-- Curso 11 -->
         <div class="col curso">
-          <div class="card curso-card h-100">
+          <div class="card curso-card h-100 custom-card">
             <img
               src="/img/curso-php.png"
               class="card-img-top"
               alt="Curso de PHP"
             />
             <div class="card-body">
-              <h5 class="card-title">Curso de PHP</h5>
-              <p class="card-text">Aprende PHP desde cero.</p>
+              <h5 class="card-title text-white">Curso de PHP</h5>
+              <p class="card-text text-white">Aprende PHP desde cero.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=11"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price">S/20.00 PEN</span>
+                <span class="card-price text-white">S/20.00 PEN</span>
                 <button
-                class="btn btn-success comprar-curso"
-                data-nombre="Curso de PHP"
-                data-imagen="/img/curso-php.png"
-                data-precio="20"
-              >
-                Comprar
-              </button>
+                  class="btn btn-success comprar-curso"
+                  data-nombre="Curso de PHP"
+                  data-imagen="/img/curso-php.png"
+                  data-precio="20"
+                >
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -666,15 +674,15 @@
     <script>
       // Obtener el botón "Continuar compra"
       const btnContinuarCompra = document.querySelector('a[href="/pago.html"]');
-    
+
       btnContinuarCompra.addEventListener("click", function (e) {
         // Obtener el carrito desde localStorage
         const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    
+
         // Si el carrito está vacío, prevenimos la navegación y mostramos alerta
         if (carrito.length === 0) {
           e.preventDefault();
-    
+
           Swal.fire({
             icon: "warning",
             title: "Tu carrito está vacío",
@@ -685,8 +693,5 @@
         }
       });
     </script>
-    
-    
-    
   </body>
 </html>
