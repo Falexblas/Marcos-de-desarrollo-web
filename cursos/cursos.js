@@ -619,24 +619,37 @@ const Swal = window.Swal;
 // Elemento del botón "Continuar compra"
 const continuarCompraBtn = document.getElementById('continuarCompraBtn');
 
-// Cargar el carrito desde localStorage
-
-
 // Agregar evento al botón "Continuar compra"
 if (continuarCompraBtn) {
   continuarCompraBtn.addEventListener('click', (e) => {
-    // Prevenir la redirección predeterminada
     e.preventDefault();
-
-    // Verificar si el carrito está vacío
+    
+    // Validar que el usuario esté logueado: comprobamos la variable 'usuarioActivo' en localStorage
+    const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+    
+    if (!usuarioActivo) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Debes iniciar sesión para continuar con la compra',
+        confirmButtonText: 'Iniciar sesión'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Mostrar el modal de login (la función se define en tu script de login)
+          mostrarModalLogin();
+        }
+      });
+      return; // Detenemos la ejecución si no hay sesión
+    }
+    
+    // Si el usuario está logueado, procedemos a validar si hay productos en el carrito
     if (carritoCursos.length === 0) {
       Swal.fire({
         icon: 'warning',
         title: 'Carrito vacío',
-        text: 'No puedes continuar porque tu carrito está vacío. Agrega cursos para proceder al pago.',
+        text: 'No puedes continuar porque tu carrito está vacío. Agrega cursos para proceder al pago.'
       });
     } else {
-      // Redirigir al usuario a la página de pago
+      // Si ambas condiciones se cumplen, redirigimos a la página de pago
       window.location.href = '/pago.html';
     }
   });
