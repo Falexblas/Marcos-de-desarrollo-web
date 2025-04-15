@@ -96,8 +96,8 @@
         </div>
         <!-- Botón "Continuar compra" -->
         <div class="text-end mt-3">
-          <a href="/pago.html" class="btn btn-success rounded-pill w-100"
-            >Continuar compra</a
+          <a href="/pago.html" id="btnContinuarCompra" class="btn btn-primary"
+          >Continuar compra</a
           >
         </div>
       </div>
@@ -809,7 +809,7 @@
     </script>
    <script>
     // Obtener el botón "Continuar compra"
-    const btnContinuarCompra = document.querySelector('a[href="/pago.html"]');
+    const btnContinuarCompra = document.getElementById("btnContinuarCompra");
   
     btnContinuarCompra.addEventListener("click", function (e) {
       // Prevenir el comportamiento por defecto hasta realizar las validaciones
