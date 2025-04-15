@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="img/programacion.png" />
+    <link rel="stylesheet" href="log.css">
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
@@ -48,25 +49,13 @@
 
               <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person"></i>
-                <span id="usernameDisplay">Invitado</span>
+                <span id="usernameDisplay"></span>
               </a>
 
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+              <ul>
                 <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
                 <li>
-                  <a class="dropdown-item" href="login.html" id="loginLink">Iniciar sesión</a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <!-- Solo mostrar "Cerrar sesión" si hay un usuario logueado -->
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="#"
-                    onclick="cerrarSesion()"
-                    id="cerrarSesionLink"
-                    style="display: none"
-                    >Cerrar sesión</a
-                  >
+                  <a href="#" id="loginLink"></a>
                 </li>
               </ul>
               
@@ -637,51 +626,9 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      // Obtener el nombre del usuario de localStorage
-      const usuarioGuardado = JSON.parse(
-        localStorage.getItem("usuarioRegistrado")
-      );
-
-      // Si el usuario está logueado
-      if (usuarioGuardado) {
-        const username = usuarioGuardado.name;
-        document.getElementById("usernameDisplay").textContent = username;
-
-        // Cambiar "Iniciar sesión" por "Cerrar sesión"
-        document.getElementById("loginLink").textContent = "Cerrar sesión";
-        document.getElementById("loginLink").setAttribute("href", "#"); // No redirigir si está logueado
-        document.getElementById("cerrarSesionLink").style.display = "block"; // Mostrar "Cerrar sesión"
-
-        // Eliminar "Iniciar sesión" para evitar duplicados
-        document.getElementById("loginLink").parentElement.style.display =
-          "none";
-      } else {
-        // Si no hay usuario, mostrar "Invitado" y solo mostrar "Iniciar sesión"
-        document.getElementById("usernameDisplay").textContent = "Invitado";
-        document.getElementById("loginLink").textContent = "Iniciar sesión";
-        document.getElementById("loginLink").setAttribute("href", "login.html"); // Redirigir al login
-        document.getElementById("cerrarSesionLink").style.display = "none"; // Ocultar "Cerrar sesión"
-
-        // Asegurarse de que "Iniciar sesión" se muestre si no hay usuario
-        document.getElementById("loginLink").parentElement.style.display =
-          "block";
-      }
-
-      // Función para cerrar sesión
-      function cerrarSesion() {
-        // Limpiar los datos del usuario en localStorage
-        localStorage.removeItem("usuarioRegistrado");
-
-        // Redirigir al login
-        window.location.href = "login.html";
-      }
-
-      
-    </script>
-
-    <script src="script.js"></script>
+   
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="cursos/cursos.js"></script>
+    <script src="log.js"></script>
   </body>
 </html>

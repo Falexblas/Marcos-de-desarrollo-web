@@ -1,21 +1,40 @@
-body {
-  background-color: #111827;
-  min-height: 100vh;
-  color: #f3f4f6; /* Color de texto principal */
-}
+/* modal-login */
 
-.form-container {
-  background-color: rgba(31, 41, 55, 0.9); 
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.2); 
-  border: 1px solid rgba(167, 139, 250, 0.1); 
+/* Estilo para formularios oscuros */
+.modal-content {
+  background-color: rgba(31, 41, 55, 0.95);
+  border: 1px solid rgba(167, 139, 250, 0.1);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
   color: #f3f4f6;
+  
 }
 
-.input-group label {
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-body label {
   color: rgba(156, 163, 175, 1);
 }
 
+.form-control {
+  background-color: #1f2937;
+  border: 1px solid rgba(55, 65, 81, 1);
+  color: #f3f4f6;
+}
 
+.form-control:focus {
+  background-color: #1f2937;
+  border-color: #6366f1;
+  color: #fff;
+  box-shadow: 0 0 0 0.2rem rgba(99, 102, 241, 0.25);
+}
+
+/* Botones sociales y generales */
 .social-btn {
   padding: 10px 12px;
   transition: all 0.3s ease;
@@ -29,19 +48,15 @@ body {
   background-color: rgb(45, 56, 77);
 }
 
-
+/* Colores de fondo y borde para elementos específicos */
 .bg-gray-700 {
   background-color: #374151 !important;
 }
-
 
 .border-gray-600 {
   border-color: #4b5563 !important;
 }
 
-
 .text-white {
   color: #ffffff !important;
 }
-
-
