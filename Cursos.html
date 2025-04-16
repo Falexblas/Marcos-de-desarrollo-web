@@ -102,8 +102,8 @@
         </div>
         <!-- Botón "Continuar compra" -->
         <div class="text-end mt-3">
-          <a href="/pago.html" class="btn btn-success rounded-pill w-100"
-            >Continuar compra</a
+          <a href="/pago.html" id="btnContinuarCompra" class="btn btn-primary"
+          >Continuar compra</a
           >
         </div>
       </div>
@@ -1102,48 +1102,49 @@
         }
       });
     </script>
-    <script>
-      // Obtener el botón "Continuar compra"
-      const btnContinuarCompra = document.querySelector('a[href="/pago.html"]');
-
-      btnContinuarCompra.addEventListener("click", function (e) {
-        // Prevenir el comportamiento por defecto hasta realizar las validaciones
-        e.preventDefault();
-
-        // Validar que el usuario esté logueado
-        const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
-        if (!usuarioActivo) {
-          Swal.fire({
-            icon: "warning",
-            title: "Debes iniciar sesión para continuar con la compra",
-            confirmButtonText: "Iniciar sesión",
-          }).then((result) => {
-            if (result.isConfirmed) {
-              // Llama a la función que muestra el modal de login (la tienes definida en tu script de login)
-              mostrarModalLogin();
-            }
-          });
-          return; // Detenemos la ejecución hasta tener sesión
-        }
-
-        // Obtener el carrito desde localStorage
-        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-
-        // Verificar si el carrito está vacío
-        if (carrito.length === 0) {
-          Swal.fire({
-            icon: "warning",
-            title: "Tu carrito está vacío",
-            text: "Agrega al menos un curso antes de continuar con la compra.",
-            confirmButtonText: "OK",
-            confirmButtonColor: "#3085d6",
-          });
-          return;
-        }
-
-        // Si ambas condiciones se cumplen, redirigimos a la página de pago
-        window.location.href = "/pago.html";
-      });
-    </script>
+   <script>
+    // Obtener el botón "Continuar compra"
+    const btnContinuarCompra = document.getElementById("btnContinuarCompra");
+  
+    btnContinuarCompra.addEventListener("click", function (e) {
+      // Prevenir el comportamiento por defecto hasta realizar las validaciones
+      e.preventDefault();
+  
+      // Validar que el usuario esté logueado
+      const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+      if (!usuarioActivo) {
+        Swal.fire({
+          icon: "warning",
+          title: "Debes iniciar sesión para continuar con la compra",
+          confirmButtonText: "Iniciar sesión",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Llama a la función que muestra el modal de login (la tienes definida en tu script de login)
+            mostrarModalLogin();
+          }
+        });
+        return; // Detenemos la ejecución hasta tener sesión
+      }
+  
+      // Obtener el carrito desde localStorage
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+  
+      // Verificar si el carrito está vacío
+      if (carrito.length === 0) {
+        Swal.fire({
+          icon: "warning",
+          title: "Tu carrito está vacío",
+          text: "Agrega al menos un curso antes de continuar con la compra.",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#3085d6",
+        });
+        return;
+      }
+  
+      // Si ambas condiciones se cumplen, redirigimos a la página de pago
+      window.location.href = '/pago.html';
+    });
+  </script>
+  
   </body>
 </html>
