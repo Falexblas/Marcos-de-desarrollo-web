@@ -210,3 +210,24 @@ hr {
   color: white; /* Texto blanco para contraste */
 }
 
+.comprar-curso span {
+  pointer-events: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column; /* Distribuye los elementos verticalmente */
+  padding: 1rem; /* Ajusta el padding según sea necesario */
+  flex-grow: 1; /* Hace que el card-body ocupe todo el espacio disponible */
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    padding: 0.375rem 0.75rem; 
+    font-size: 0.875rem; 
+  }
+
+  .card-price {
+    font-size: 0.975rem; 
+  }
+}

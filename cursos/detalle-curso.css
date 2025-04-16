@@ -1,5 +1,5 @@
 body { 
-    padding-top: 80px; /* espacio para navbar fija */
+    padding-top: 120px; /* espacio para navbar fija */
 
   }
   
@@ -10,22 +10,6 @@ body {
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-
-  
-
-  
-  .curso-detalle {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
   }
   
   .encabezado {
@@ -48,50 +32,11 @@ body {
     margin-bottom: 1.5rem;
   }
   
-  ul {
-    padding-left: 1.5rem;
-  }
-  
-  ul li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-  }
+
   
   .info-extra {
     margin-top: 1.5rem;
     font-weight: 600;
-  }
-  
-  .acciones {
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .btn-premium, .btn-compra {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .btn-premium {
-    background-color: #f0c000;
-    color: #000;
-  }
-  
-  .btn-compra {
-    background-color: #238636;
-    color: #fff;
-  }
-  
-  .imagen-curso img {
-  max-width: 350px;
-    border-radius: 12px;
-    margin-top: 1rem;
   }
   
   .temario {
@@ -156,14 +101,9 @@ body {
     margin-bottom: 0.5rem;
   }
   
-  a {
-    color: #58a6ff;
-    text-decoration: none;
-  }
+
   
-  a:hover {
-    text-decoration: underline;
-  }
+
   
   @media (max-width: 768px) {
     .encabezado {

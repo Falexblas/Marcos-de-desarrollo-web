@@ -14,9 +14,9 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="img/programacion.png" />
-    <link rel="stylesheet" href="log.css">
+    <link rel="stylesheet" href="log.css" />
   </head>
-  <body class="cursos-page pt-5 d-flex flex-column min-vh-100" >
+  <body class="cursos-page pt-5 d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top">
       <div class="container-fluid">
@@ -46,8 +46,14 @@
             </li>
             <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
             <li class="nav-item">
-
-              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a
+                class="nav-link text-white"
+                href="#"
+                id="userDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <i class="bi bi-person"></i>
                 <span id="usernameDisplay"></span>
               </a>
@@ -119,7 +125,10 @@
       </div>
 
       <!-- Lista de cursos -->
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5" id="lista-cursos">
+      <div
+        class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5"
+        id="lista-cursos"
+      >
         <!-- Curso 1 -->
         <div class="col curso">
           <div class="card curso-card h-100 custom-card">
@@ -139,14 +148,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/30.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de Java"
                   data-imagen="/img/curso-java.jpg"
                   data-precio="30"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/30.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -172,14 +183,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/15.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de Python"
                   data-imagen="/img/python-curso-gratis.jpg"
                   data-precio="15"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/15.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -205,14 +218,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/25.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de JavaScript"
                   data-imagen="/img/curso-js.jpg"
                   data-precio="25"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/25.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -238,19 +253,22 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/20.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de CSS"
                   data-imagen="/img/curso-css.jpg"
                   data-precio="20"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/20.00 PEN</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
+
         <!-- Curso 5 -->
         <div class="col curso">
           <div class="card curso-card h-100 custom-card">
@@ -270,14 +288,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/10.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de HTML"
                   data-imagen="/img/curso-html.jpg"
                   data-precio="10"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/10.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -303,14 +323,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/25.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de React JS"
                   data-imagen="/img/curso-react.jpg"
                   data-precio="25"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/25.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -334,14 +356,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/20.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de TypeScript"
                   data-imagen="/img/curso-typescript.png"
                   data-precio="20"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/20.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -365,14 +389,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/10.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de Git y GitHub"
                   data-imagen="/img/curso-git-github.jpg"
                   data-precio="10"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/10.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -389,21 +415,25 @@
             />
             <div class="card-body">
               <h5 class="card-title text-white">Curso de Angular FW</h5>
-              <p class="card-text text-primary">Aprende Angular FW desde cero.</p>
+              <p class="card-text text-primary">
+                Aprende Angular FW desde cero.
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a
                   href="/cursos/detalle-curso.html?id=3"
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/30.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de Angular FW"
                   data-imagen="/img/curso-angular.jpeg"
                   data-precio="30"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/30.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -429,20 +459,21 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/35.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de Spring Boot"
                   data-imagen="/img/curso-springboot.webp"
                   data-precio="35"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/35.00 PEN</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
-
         <!-- Curso 11 -->
         <div class="col curso">
           <div class="card curso-card h-100 custom-card">
@@ -460,14 +491,16 @@
                   class="btn btn-primary me-2"
                   >Ver más</a
                 >
-                <span class="card-price text-white">S/20.00 PEN</span>
+
+                <!-- Botón combinado -->
                 <button
-                  class="btn btn-success comprar-curso"
+                  class="btn btn-success d-flex align-items-center gap-2 comprar-curso"
                   data-nombre="Curso de PHP"
                   data-imagen="/img/curso-php.png"
                   data-precio="20"
                 >
-                  Comprar
+                  <span>Comprar</span>
+                  <span class="card-price">S/20.00 PEN</span>
                 </button>
               </div>
             </div>
@@ -477,289 +510,551 @@
     </div>
 
     <!-- Footer -->
-<footer class="text-center text-lg-start text-white bg-dark mt-auto">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Links -->
-    <section class="">
-      <!--Grid row-->
-      <div class="row">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">CodeXpert</h6>
-          <p>
-            Aprende programación de manera práctica y conviértete en un
-            experto en tecnologías como Java, React, Spring Boot y más.
-            ¡Impulsa tu carrera hoy!
-            <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
-          </p>
-        </div>
-        <!-- Grid column -->
+    <footer class="text-center text-lg-start text-white bg-dark mt-auto">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">CodeXpert</h6>
+              <p>
+                Aprende programación de manera práctica y conviértete en un
+                experto en tecnologías como Java, React, Spring Boot y más.
+                ¡Impulsa tu carrera hoy!
+                <i class="bi bi-rocket-takeoff-fill icon-rocket"></i>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-        <hr class="w-100 clearfix d-md-none" />
+            <hr class="w-100 clearfix d-md-none" />
 
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">SERVICIO AL CLIENTE</h6>
-          <p>
-            <a href="#termsModal" class="text-white text-decoration-none" data-bs-toggle="modal">Términos y condiciones de uso</a>
-          </p>
-          <p>
-            <a href="#refundModal" class="text-white text-decoration-none" data-bs-toggle="modal">Política de reembolsos</a>
-          </p>
-          <p>
-            <a href="#faqModal" class="text-white text-decoration-none" data-bs-toggle="modal">Preguntas frecuentes</a>
-          </p>
-        </div>
-        <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                SERVICIO AL CLIENTE
+              </h6>
+              <p>
+                <a
+                  href="#termsModal"
+                  class="text-white text-decoration-none"
+                  data-bs-toggle="modal"
+                  >Términos y condiciones de uso</a
+                >
+              </p>
+              <p>
+                <a
+                  href="#refundModal"
+                  class="text-white text-decoration-none"
+                  data-bs-toggle="modal"
+                  >Política de reembolsos</a
+                >
+              </p>
+              <p>
+                <a
+                  href="#faqModal"
+                  class="text-white text-decoration-none"
+                  data-bs-toggle="modal"
+                  >Preguntas frecuentes</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
 
-        <hr class="w-100 clearfix d-md-none" />
+            <hr class="w-100 clearfix d-md-none" />
 
-        <!-- Grid column -->
-        <hr class="w-100 clearfix d-md-none" />
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
 
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">CONTÁCTANOS</h6>
-          <p><i class="bi bi-envelope mr-3"></i> CodeXpert@gmail.com</p>
-          <p><i class="bi bi-telephone mr-3"></i> + 01 234 567 88</p>
-        </div>
-        <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">CONTÁCTANOS</h6>
+              <p><i class="bi bi-envelope mr-3"></i> CodeXpert@gmail.com</p>
+              <p><i class="bi bi-telephone mr-3"></i> + 01 234 567 88</p>
+            </div>
+            <!-- Grid column -->
 
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 fw-bold">Síguenos</h6>
-          <div class="d-flex gap-3 justify-content-center">
-            <!-- Facebook -->
-            <a target="_blank" href="https://www.facebook.com/?ref=logo" class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px">
-              <i class="bi bi-facebook"></i>
-            </a>
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 fw-bold">Síguenos</h6>
+              <div class="d-flex gap-3 justify-content-center">
+                <!-- Facebook -->
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/?ref=logo"
+                  class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
 
-            <!-- Twitter -->
-            <a target="_blank" href="https://x.com/" class="btn btn-info rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px">
-              <i class="bi bi-twitter"></i>
-            </a>
+                <!-- Twitter -->
+                <a
+                  target="_blank"
+                  href="https://x.com/"
+                  class="btn btn-info rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-twitter"></i>
+                </a>
 
-            <!-- Instagram -->
-            <a target="_blank" href="https://www.instagram.com/" class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px">
-              <i class="bi bi-instagram"></i>
-            </a>
+                <!-- Instagram -->
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  class="btn btn-danger rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-instagram"></i>
+                </a>
 
-            <!-- GitHub -->
-            <a target="_blank" href="https://github.com/Falexblas/Marcos-de-desarrollo-web" class="btn btn-secondary rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px">
-              <i class="bi bi-github"></i>
-            </a>
+                <!-- GitHub -->
+                <a
+                  target="_blank"
+                  href="https://github.com/Falexblas/Marcos-de-desarrollo-web"
+                  class="btn btn-secondary rounded-circle d-flex align-items-center justify-content-center"
+                  style="width: 40px; height: 40px"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
       </div>
-      <!--Grid row-->
-    </section>
-    <!-- Section: Links -->
-  </div>
-  <!-- Grid container -->
+      <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3 mt-2" style="background-color: rgba(0, 0, 0, 0.2)">
-    © 2025 Copyright
-  </div>
-</footer>
+      <!-- Copyright -->
+      <div
+        class="text-center p-3 mt-2"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+        © 2025 Copyright
+      </div>
+    </footer>
 
-<!-- Modal: Términos y condiciones -->
-    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <!-- Modal: Términos y condiciones -->
+    <div
+      class="modal fade"
+      id="termsModal"
+      tabindex="-1"
+      aria-labelledby="termsModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content bg-dark text-white">
           <!-- Encabezado -->
           <div class="modal-header border-bottom border-secondary">
-            <h5 class="modal-title fw-bold" id="termsModalLabel">Términos y Condiciones de Devverso</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h5 class="modal-title fw-bold" id="termsModalLabel">
+              Términos y Condiciones de Devverso
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
 
           <!-- Cuerpo -->
           <div class="modal-body">
-            <p class="fw-semibold">Bienvenido a <span class="text-warning">Devverso</span>, tu plataforma de aprendizaje en programación.</p>
-            <p>Al utilizar nuestros servicios, aceptas cumplir con los siguientes términos y condiciones:</p>
+            <p class="fw-semibold">
+              Bienvenido a <span class="text-warning">Devverso</span>, tu
+              plataforma de aprendizaje en programación.
+            </p>
+            <p>
+              Al utilizar nuestros servicios, aceptas cumplir con los siguientes
+              términos y condiciones:
+            </p>
 
             <h6 class="fw-bold text-info">1. Aceptación de los Términos</h6>
-            <p>Al registrarte o utilizar cualquier servicio de Devverso, aceptas estos términos y condiciones en su totalidad. Si no estás de acuerdo con alguno de estos términos, no utilices nuestros servicios.</p>
+            <p>
+              Al registrarte o utilizar cualquier servicio de Devverso, aceptas
+              estos términos y condiciones en su totalidad. Si no estás de
+              acuerdo con alguno de estos términos, no utilices nuestros
+              servicios.
+            </p>
 
             <h6 class="fw-bold text-info">2. Uso de la Plataforma</h6>
             <ul>
-              <li>Los cursos disponibles en Devverso están diseñados exclusivamente para fines educativos.</li>
-              <li>No está permitido compartir tus credenciales de acceso con terceros.</li>
-              <li>El contenido de los cursos (videos, códigos, materiales) es propiedad de Devverso y no puede ser reproducido sin autorización.</li>
+              <li>
+                Los cursos disponibles en Devverso están diseñados
+                exclusivamente para fines educativos.
+              </li>
+              <li>
+                No está permitido compartir tus credenciales de acceso con
+                terceros.
+              </li>
+              <li>
+                El contenido de los cursos (videos, códigos, materiales) es
+                propiedad de Devverso y no puede ser reproducido sin
+                autorización.
+              </li>
             </ul>
 
             <h6 class="fw-bold text-info">3. Compras y Pagos</h6>
             <ul>
-              <li>El pago por los cursos se realiza a través de los métodos habilitados en nuestra plataforma.</li>
-              <li>El acceso a los cursos se otorga inmediatamente después de confirmar el pago.</li>
-              <li>No se realizan reembolsos una vez que el curso haya sido accedido o iniciado.</li>
+              <li>
+                El pago por los cursos se realiza a través de los métodos
+                habilitados en nuestra plataforma.
+              </li>
+              <li>
+                El acceso a los cursos se otorga inmediatamente después de
+                confirmar el pago.
+              </li>
+              <li>
+                No se realizan reembolsos una vez que el curso haya sido
+                accedido o iniciado.
+              </li>
             </ul>
 
             <h6 class="fw-bold text-info">4. Conducta del Usuario</h6>
             <ul>
-              <li>Los usuarios deben respetar las normas comunitarias y evitar cualquier tipo de conducta ofensiva o disruptiva.</li>
-              <li>Está prohibido publicar contenido inapropiado en los foros o comentarios de los cursos.</li>
+              <li>
+                Los usuarios deben respetar las normas comunitarias y evitar
+                cualquier tipo de conducta ofensiva o disruptiva.
+              </li>
+              <li>
+                Está prohibido publicar contenido inapropiado en los foros o
+                comentarios de los cursos.
+              </li>
             </ul>
 
             <h6 class="fw-bold text-info">5. Modificaciones a los Términos</h6>
-            <p>Devverso se reserva el derecho de modificar estos términos en cualquier momento. Los cambios serán notificados a través de la plataforma.</p>
+            <p>
+              Devverso se reserva el derecho de modificar estos términos en
+              cualquier momento. Los cambios serán notificados a través de la
+              plataforma.
+            </p>
 
             <h6 class="fw-bold text-info">6. Soporte Técnico</h6>
-            <p>Si tienes preguntas o problemas relacionados con nuestros servicios, puedes contactarnos a través de <a href="mailto:support@devverso.com" class="text-warning">support@devverso.com</a>.</p>
+            <p>
+              Si tienes preguntas o problemas relacionados con nuestros
+              servicios, puedes contactarnos a través de
+              <a href="mailto:support@devverso.com" class="text-warning"
+                >support@devverso.com</a
+              >.
+            </p>
           </div>
 
           <!-- Pie de página -->
           <div class="modal-footer border-top border-secondary">
-            <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Cerrar</button>
+            <button
+              type="button"
+              class="btn btn-outline-warning"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-      <!-- Modal: Política de reembolsos -->
-      <div class="modal fade" id="refundModal" tabindex="-1" aria-labelledby="refundModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content bg-dark text-white">
-            <!-- Encabezado -->
-            <div class="modal-header border-bottom border-secondary">
-              <h5 class="modal-title fw-bold" id="refundModalLabel">Política de Reembolsos de Devverso</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+    <!-- Modal: Política de reembolsos -->
+    <div
+      class="modal fade"
+      id="refundModal"
+      tabindex="-1"
+      aria-labelledby="refundModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white">
+          <!-- Encabezado -->
+          <div class="modal-header border-bottom border-secondary">
+            <h5 class="modal-title fw-bold" id="refundModalLabel">
+              Política de Reembolsos de Devverso
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-            <!-- Cuerpo -->
-            <div class="modal-body">
-              <p class="fw-semibold">En <span class="text-warning">Devverso</span>, nos esforzamos por ofrecer una experiencia de aprendizaje excepcional. Sin embargo, entendemos que puede haber situaciones en las que necesites solicitar un reembolso.</p>
-              <p>Por favor, revisa nuestra política de reembolsos detallada a continuación:</p>
+          <!-- Cuerpo -->
+          <div class="modal-body">
+            <p class="fw-semibold">
+              En <span class="text-warning">Devverso</span>, nos esforzamos por
+              ofrecer una experiencia de aprendizaje excepcional. Sin embargo,
+              entendemos que puede haber situaciones en las que necesites
+              solicitar un reembolso.
+            </p>
+            <p>
+              Por favor, revisa nuestra política de reembolsos detallada a
+              continuación:
+            </p>
 
-              <h6 class="fw-bold text-info">1. Plazo para Solicitar un Reembolso</h6>
-              <ul>
-                <li>Los reembolsos deben solicitarse dentro de los <strong>7 días hábiles</strong> posteriores a la compra del curso.</li>
-                <li>El acceso al contenido del curso no debe haber sido iniciado ni completado.</li>
-              </ul>
+            <h6 class="fw-bold text-info">
+              1. Plazo para Solicitar un Reembolso
+            </h6>
+            <ul>
+              <li>
+                Los reembolsos deben solicitarse dentro de los
+                <strong>7 días hábiles</strong> posteriores a la compra del
+                curso.
+              </li>
+              <li>
+                El acceso al contenido del curso no debe haber sido iniciado ni
+                completado.
+              </li>
+            </ul>
 
-              <h6 class="fw-bold text-info">2. Requisitos para ser Elegible</h6>
-              <ul>
-                <li>El usuario no debe haber descargado ningún material del curso.</li>
-                <li>No se permiten reembolsos si el usuario ha accedido a más del <strong>10%</strong> del contenido del curso.</li>
-                <li>La solicitud debe incluir una justificación válida para el reembolso.</li>
-              </ul>
+            <h6 class="fw-bold text-info">2. Requisitos para ser Elegible</h6>
+            <ul>
+              <li>
+                El usuario no debe haber descargado ningún material del curso.
+              </li>
+              <li>
+                No se permiten reembolsos si el usuario ha accedido a más del
+                <strong>10%</strong> del contenido del curso.
+              </li>
+              <li>
+                La solicitud debe incluir una justificación válida para el
+                reembolso.
+              </li>
+            </ul>
 
-              <h6 class="fw-bold text-info">3. Proceso de Solicitud</h6>
-              <ul>
-                <li>Envía un correo electrónico a <a href="mailto:support@devverso.com" class="text-warning">support@devverso.com</a> con tu nombre de usuario, el nombre del curso y una breve explicación de tu solicitud.</li>
-                <li>Nuestro equipo de soporte revisará tu solicitud y te responderá dentro de <strong>3 días hábiles</strong>.</li>
-              </ul>
+            <h6 class="fw-bold text-info">3. Proceso de Solicitud</h6>
+            <ul>
+              <li>
+                Envía un correo electrónico a
+                <a href="mailto:support@devverso.com" class="text-warning"
+                  >support@devverso.com</a
+                >
+                con tu nombre de usuario, el nombre del curso y una breve
+                explicación de tu solicitud.
+              </li>
+              <li>
+                Nuestro equipo de soporte revisará tu solicitud y te responderá
+                dentro de <strong>3 días hábiles</strong>.
+              </li>
+            </ul>
 
-              <h6 class="fw-bold text-info">4. Tiempo de Procesamiento</h6>
-              <ul>
-                <li>Una vez aprobado, el reembolso se procesará en un plazo máximo de <strong>10 días hábiles</strong>.</li>
-                <li>El monto será devuelto al mismo método de pago utilizado durante la compra.</li>
-              </ul>
+            <h6 class="fw-bold text-info">4. Tiempo de Procesamiento</h6>
+            <ul>
+              <li>
+                Una vez aprobado, el reembolso se procesará en un plazo máximo
+                de <strong>10 días hábiles</strong>.
+              </li>
+              <li>
+                El monto será devuelto al mismo método de pago utilizado durante
+                la compra.
+              </li>
+            </ul>
 
-              <h6 class="fw-bold text-info">5. Excepciones</h6>
-              <ul>
-                <li>No se aceptarán reembolsos para cursos que hayan sido comprados como parte de promociones o paquetes especiales.</li>
-                <li>Los cursos gratuitos o de prueba no son elegibles para reembolsos.</li>
-              </ul>
-            </div>
+            <h6 class="fw-bold text-info">5. Excepciones</h6>
+            <ul>
+              <li>
+                No se aceptarán reembolsos para cursos que hayan sido comprados
+                como parte de promociones o paquetes especiales.
+              </li>
+              <li>
+                Los cursos gratuitos o de prueba no son elegibles para
+                reembolsos.
+              </li>
+            </ul>
+          </div>
 
-            <!-- Pie de página -->
-            <div class="modal-footer border-top border-secondary">
-              <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+          <!-- Pie de página -->
+          <div class="modal-footer border-top border-secondary">
+            <button
+              type="button"
+              class="btn btn-outline-warning"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Modal: Preguntas frecuentes -->
-      <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content bg-dark text-white">
-            
-            <!-- Encabezado -->
-            <div class="modal-header border-bottom border-secondary">
-              <h5 class="modal-title fw-bold" id="faqModalLabel">Preguntas Frecuentes de Devverso</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+    <!-- Modal: Preguntas frecuentes -->
+    <div
+      class="modal fade"
+      id="faqModal"
+      tabindex="-1"
+      aria-labelledby="faqModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white">
+          <!-- Encabezado -->
+          <div class="modal-header border-bottom border-secondary">
+            <h5 class="modal-title fw-bold" id="faqModalLabel">
+              Preguntas Frecuentes de Devverso
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
 
-            <!-- Cuerpo -->
-            <div class="modal-body">
-              <p class="fw-semibold">Aquí encontrarás respuestas a las preguntas más comunes sobre <span class="text-primary">Devverso</span>.</p>
+          <!-- Cuerpo -->
+          <div class="modal-body">
+            <p class="fw-semibold">
+              Aquí encontrarás respuestas a las preguntas más comunes sobre
+              <span class="text-primary">Devverso</span>.
+            </p>
 
-              <!-- Acordeón -->
-              <div class="accordion" id="faqAccordion">
-                <!-- Pregunta 1 -->
-                <div class="accordion-item bg-dark border border-white">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed bg-dark text-success custom-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      ¿Cómo me inscribo en un curso?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse text-white" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Para inscribirte en un curso, sigue estos pasos:
-                      <ol>
-                        <li>Regístrate o inicia sesión en tu cuenta de Devverso.</li>
-                        <li>Navega por nuestro catálogo de cursos y selecciona el que te interese.</li>
-                        <li>Haz clic en "Comprar ahora" y sigue las instrucciones de pago.</li>
-                        <li>Una vez completado el pago, tendrás acceso inmediato al curso.</li>
-                      </ol>
-                    </div>
+            <!-- Acordeón -->
+            <div class="accordion" id="faqAccordion">
+              <!-- Pregunta 1 -->
+              <div class="accordion-item bg-dark border border-white">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button collapsed bg-dark text-success custom-toggle-icon"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    ¿Cómo me inscribo en un curso?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse text-white"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Para inscribirte en un curso, sigue estos pasos:
+                    <ol>
+                      <li>
+                        Regístrate o inicia sesión en tu cuenta de Devverso.
+                      </li>
+                      <li>
+                        Navega por nuestro catálogo de cursos y selecciona el
+                        que te interese.
+                      </li>
+                      <li>
+                        Haz clic en "Comprar ahora" y sigue las instrucciones de
+                        pago.
+                      </li>
+                      <li>
+                        Una vez completado el pago, tendrás acceso inmediato al
+                        curso.
+                      </li>
+                    </ol>
                   </div>
                 </div>
+              </div>
 
-                <!-- Pregunta 2 -->
-                <div class="accordion-item bg-dark border border-white">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed bg-dark text-success custom-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      ¿Qué pasa si no completo un curso a tiempo?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse text-white" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      No te preocupes, los cursos en Devverso no tienen fecha de expiración. Puedes completarlos a tu propio ritmo. Sin embargo, te recomendamos seguir un horario regular para aprovechar al máximo tu aprendizaje.
-                    </div>
+              <!-- Pregunta 2 -->
+              <div class="accordion-item bg-dark border border-white">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed bg-dark text-success custom-toggle-icon"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    ¿Qué pasa si no completo un curso a tiempo?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse text-white"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    No te preocupes, los cursos en Devverso no tienen fecha de
+                    expiración. Puedes completarlos a tu propio ritmo. Sin
+                    embargo, te recomendamos seguir un horario regular para
+                    aprovechar al máximo tu aprendizaje.
                   </div>
                 </div>
+              </div>
 
-                <!-- Pregunta 3 -->
-                <div class="accordion-item bg-dark border border-white">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed bg-dark text-success custom-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      ¿Puedo descargar los materiales del curso?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse text-white" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Sí, muchos de nuestros cursos incluyen materiales descargables como códigos fuente, presentaciones y ejercicios prácticos. Estos estarán disponibles en la sección de recursos del curso.
-                    </div>
+              <!-- Pregunta 3 -->
+              <div class="accordion-item bg-dark border border-white">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed bg-dark text-success custom-toggle-icon"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    ¿Puedo descargar los materiales del curso?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse text-white"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Sí, muchos de nuestros cursos incluyen materiales
+                    descargables como códigos fuente, presentaciones y
+                    ejercicios prácticos. Estos estarán disponibles en la
+                    sección de recursos del curso.
                   </div>
                 </div>
+              </div>
 
-                <!-- Pregunta 4 -->
-                <div class="accordion-item bg-dark border border-white">
-                  <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed bg-dark text-success custom-toggle-icon" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                      ¿Qué sucede si tengo problemas técnicos?
-                    </button>
-                  </h2>
-                  <div id="collapseFour" class="accordion-collapse collapse text-white" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      Si experimentas problemas técnicos, puedes contactar a nuestro equipo de soporte técnico a través de <a href="mailto:support@devverso.com" class="text-warning">support@devverso.com</a>. Te responderemos lo antes posible para ayudarte a resolver el problema.
-                    </div>
+              <!-- Pregunta 4 -->
+              <div class="accordion-item bg-dark border border-white">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed bg-dark text-success custom-toggle-icon"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    ¿Qué sucede si tengo problemas técnicos?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse text-white"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Si experimentas problemas técnicos, puedes contactar a
+                    nuestro equipo de soporte técnico a través de
+                    <a href="mailto:support@devverso.com" class="text-warning"
+                      >support@devverso.com</a
+                    >. Te responderemos lo antes posible para ayudarte a
+                    resolver el problema.
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Pie de página -->
-            <div class="modal-footer border-top border-secondary">
-              <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Cerrar</button>
-            </div>
+          <!-- Pie de página -->
+          <div class="modal-footer border-top border-secondary">
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
           </div>
         </div>
       </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -780,7 +1075,7 @@
         });
       })();
     </script>
-   
+
     <script>
       // Manejar clic en los botones "Comprar" (en cursos.html)
       document.addEventListener("click", function (event) {
@@ -807,49 +1102,48 @@
         }
       });
     </script>
-   <script>
-    // Obtener el botón "Continuar compra"
-    const btnContinuarCompra = document.querySelector('a[href="/pago.html"]');
-  
-    btnContinuarCompra.addEventListener("click", function (e) {
-      // Prevenir el comportamiento por defecto hasta realizar las validaciones
-      e.preventDefault();
-  
-      // Validar que el usuario esté logueado
-      const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
-      if (!usuarioActivo) {
-        Swal.fire({
-          icon: "warning",
-          title: "Debes iniciar sesión para continuar con la compra",
-          confirmButtonText: "Iniciar sesión",
-        }).then((result) => {
-          if (result.isConfirmed) {
-            // Llama a la función que muestra el modal de login (la tienes definida en tu script de login)
-            mostrarModalLogin();
-          }
-        });
-        return; // Detenemos la ejecución hasta tener sesión
-      }
-  
-      // Obtener el carrito desde localStorage
-      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-  
-      // Verificar si el carrito está vacío
-      if (carrito.length === 0) {
-        Swal.fire({
-          icon: "warning",
-          title: "Tu carrito está vacío",
-          text: "Agrega al menos un curso antes de continuar con la compra.",
-          confirmButtonText: "OK",
-          confirmButtonColor: "#3085d6",
-        });
-        return;
-      }
-  
-      // Si ambas condiciones se cumplen, redirigimos a la página de pago
-      window.location.href = '/pago.html';
-    });
-  </script>
-  
+    <script>
+      // Obtener el botón "Continuar compra"
+      const btnContinuarCompra = document.querySelector('a[href="/pago.html"]');
+
+      btnContinuarCompra.addEventListener("click", function (e) {
+        // Prevenir el comportamiento por defecto hasta realizar las validaciones
+        e.preventDefault();
+
+        // Validar que el usuario esté logueado
+        const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+        if (!usuarioActivo) {
+          Swal.fire({
+            icon: "warning",
+            title: "Debes iniciar sesión para continuar con la compra",
+            confirmButtonText: "Iniciar sesión",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              // Llama a la función que muestra el modal de login (la tienes definida en tu script de login)
+              mostrarModalLogin();
+            }
+          });
+          return; // Detenemos la ejecución hasta tener sesión
+        }
+
+        // Obtener el carrito desde localStorage
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        // Verificar si el carrito está vacío
+        if (carrito.length === 0) {
+          Swal.fire({
+            icon: "warning",
+            title: "Tu carrito está vacío",
+            text: "Agrega al menos un curso antes de continuar con la compra.",
+            confirmButtonText: "OK",
+            confirmButtonColor: "#3085d6",
+          });
+          return;
+        }
+
+        // Si ambas condiciones se cumplen, redirigimos a la página de pago
+        window.location.href = "/pago.html";
+      });
+    </script>
   </body>
 </html>

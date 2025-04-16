@@ -19,62 +19,56 @@
     <link rel="stylesheet" href="log.css">
   </head>
   <body class="d-flex flex-column min-vh-100">
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg bg-dark fixed-top">
-      <div class="container-fluid">
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="/img/LOGO.png" alt="logo" class="logo w-auto ms-3" />
+      </a>
+      <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-info" href="/index.html"
+              >Inicio</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
+          </li>
+          <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
+          <li class="nav-item">
 
-        <a class="navbar-brand" href="index.html">
-          <img src="/img/LOGO.png" alt="logo" class="logo w-auto ms-3" />
-        </a>
+            <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person"></i>
+              <span id="usernameDisplay"></span>
+            </a>
+          </li>
 
-        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-info" href="/index.html">Inicio</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white" href="/Cursos.html">Cursos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="/Nosotros.html">Nosotros</a>
-            </li>
-
-            <!-- Botón de persona que cambia entre "Invitado" y el nombre del usuario -->
-            <li class="nav-item">
-
-              <a class="nav-link text-white" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person"></i>
-                <span id="usernameDisplay"></span>
-              </a>
-
-              <ul>
-                <!-- Solo mostrar "Iniciar sesión" si no hay usuario logueado -->
-                <li>
-                  <a href="#" id="loginLink"></a>
-                </li>
-              </ul>
-              
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link text-white"
-                href="#"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#carrito"
-              >
-                <i class="bi bi-cart"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item">
+            <a
+              class="nav-link text-white"
+              href="#"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#carrito"
+            >
+              <i class="bi bi-cart"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
     <!-- Carrito lateral desde la derecha -->
     <div id="carrito" class="offcanvas offcanvas-end bg-dark text-white shadow-lg">
@@ -335,7 +329,7 @@
     </div>
 
     <!-- Footer -->
-<footer class="text-center text-lg-start text-white bg-dark mt-auto">
+<footer class="text-center text-lg-start  text-white bg-dark mt-auto">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Links -->
